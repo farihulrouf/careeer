@@ -1,0 +1,129 @@
+.mainDiv-assesment1 {
+  display: flex;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.assesmentCard1 {
+  flex: 1;
+  width: 100%;
+  display: block;
+}
+.assesmentHeading1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 1%;
+}
+.heading-title1 {
+  padding-left: 5%;
+  color: #303030;
+  /* font-weight: 600; */
+  font-size: 16px;
+  font-family: Open Sans SemiBold;
+}
+.assesmentDuration1 {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-bottom: 2%;
+  padding-right: 2%;
+}
+.durationItem1 {
+  height: 33px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Open Sans Regular;
+}
+.assesmentContents1 {
+  display: block;
+  padding-left: 5%;
+  min-height: 66%;
+  max-height: 66%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.contents1 {
+  padding: 1.5%;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #f8f9fd;
+  margin-bottom: 5px;
+}
+.dot1 {
+  flex: 0.12;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid #acaed8;
+  background-color: #acaed8;
+  margin-bottom: 1.5%;
+}
+.assesments1 {
+  flex: 2.5;
+  padding-left: 5%;
+  padding-right: 1%;
+  width: 40%;
+}
+.assesmentNumber1 {
+  color: #303030;
+  font-family: Open Sans Regular;
+  font-size: 14px;
+  display: flex;
+  /* white-space: nowrap; */
+}
+.assesmentDate1 {
+  color: #8e8e8e;
+  font-family: Open Sans Regular;
+  font-size: 12px;
+}
+.skillScore1 {
+  flex: 2;
+  display: flex;
+  color: #303030;
+  font-family: Open Sans Regular;
+  font-size: 14px;
+  white-space: nowrap;
+  width: 30%;
+}
+.view1 {
+  cursor: pointer;
+  flex: 1.2;
+  color: #f46773;
+  font-family: Open Sans Regular;
+  font-size: 14px;
+  width: 30%;
+  cursor: pointer;
+}
+.scroll-container::-webkit-scrollbar {
+  width: 7px;
+  background-color: #ffffff;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: var(--track-color);
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: var(--thumb-color);
+  border-radius: 20px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--thumb-hover-color);
+}
+.scroll-container:hover {
+  --thumb-color: #bbb9b9;
+}

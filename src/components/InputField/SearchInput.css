@@ -1,0 +1,81 @@
+html,
+body,
+#root,
+#App {
+  height: 100%;
+}
+
+.unOrderList1 li:hover {
+  background-color: #e8e4e4;
+}
+.unOrderList1 a {
+  color: #303030;
+}
+
+.unOrderList1 {
+  scroll-behavior: smooth;
+}
+
+.unOrderList1::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  /* background-color: #dbdada; */
+
+  border-radius: 20px;
+}
+
+.unOrderList1::-webkit-scrollbar {
+  width: 9px;
+  background-color: #ffffff;
+}
+
+.unOrderList1::-webkit-scrollbar-thumb {
+  background-color: #9e9e9e;
+  border-radius: 20px;
+}
+
+.unOrderList1::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+#InputField:hover {
+  border: 1.2px solid var(--hover);
+}
+
+#InputField {
+  --hover: rgb(247, 86, 137);
+  border: 1.2px solid rgb(222, 218, 218);
+}
+
+::placeholder {
+  color: #ababab;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #ababab;
+}
+
+::-ms-input-placeholder {
+  color: #ababab;
+}
+
+.date-list-container::-webkit-scrollbar {
+  width: 7px;
+  background-color: #ffffff;
+}
+
+.date-list-container::-webkit-scrollbar-track {
+  background: var(--track-color);
+}
+
+.date-list-container::-webkit-scrollbar-thumb {
+  background: var(--thumb-color);
+  border-radius: 20px;
+}
+
+.date-list-container::-webkit-scrollbar-thumb:hover {
+  background: var(--thumb-hover-color);
+}
+.date-list-container:hover {
+  --thumb-color: #bbb9b9;
+}

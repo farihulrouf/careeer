@@ -1,0 +1,124 @@
+.skilss-mainDiv {
+  display: flex;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.skillsCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ffffff;
+  padding: 2% 0 5% 2%;
+  border-radius: 5px;
+}
+.skillsCard-header {
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.skillsHeadingLine {
+  width: 80%;
+  border: 1px solid #f6f6f7;
+}
+.skillsHeading {
+  padding-left: 20px;
+  padding-right: 10px;
+  color: #303030;
+  font-size: 16px;
+  font-family: Open Sans SemiBold;
+  font-weight: 600;
+}
+.skills-group {
+  padding-left: 11%;
+  padding-right: 11%;
+  padding-bottom: 2%;
+}
+.Skills-contents {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+}
+.skillsName {
+  height: 32px;
+  width: 106px;
+  border: 1px solid #4d4cac;
+  border-radius: 20px;
+  padding: 2% 0% 2% 3%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: Open Sans Regular;
+  font-size: 12px;
+  color: #4d4cac;
+}
+.skillsName {
+  height: 32px;
+  width: 106px;
+  border: 1px solid #4d4cac;
+  border-radius: 20px;
+  padding: 2% 0% 2% 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-family: Open Sans Regular;
+  font-size: 12px;
+  color: #4d4cac;
+}
+.circle {
+  border-radius: 50%;
+  border: 1px solid #f1f1f8;
+  background-color: #f1f1f8;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.group-heading {
+  color: #303030;
+  font-family: Open Sans SemiBold, Regular;
+  font-size: 14px;
+  margin-bottom: 2%;
+}
+.skill {
+  width: 62%;
+}
+.circlepart {
+  width: 10%;
+  cursor: pointer;
+}
+
+.skills-container {
+  margin-right: 12px;
+}
+
+.skills-container::-webkit-scrollbar {
+  width: 7px;
+  background-color: #ffffff;
+}
+
+.skills-container::-webkit-scrollbar-track {
+  background: var(--track-color);
+}
+
+.skills-container::-webkit-scrollbar-thumb {
+  background: var(--thumb-color);
+  border-radius: 20px;
+}
+
+.skills-container::-webkit-scrollbar-thumb:hover {
+  background: var(--thumb-hover-color);
+}
+.skills-container:hover {
+  --thumb-color: #bbb9b9;
+}
+
+/* .ant-modal-body {
+  height: 90%;
+} */

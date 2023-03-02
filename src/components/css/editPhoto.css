@@ -1,0 +1,9 @@
+.ReactCrop {
+  --rotate: rotate(0deg);
+}
+.ReactCrop__crop-selection {
+  border-radius: 100%;
+}
+.ReactCrop__image {
+  transform: var(--rotate);
+}

@@ -1,0 +1,48 @@
+.Lateral-main {
+  display: flex;
+  width: 100%;
+  /* background: greenyellow; */
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 36px 0;
+  min-width: 1200px;
+}
+.Lateral-step {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+}
+.Lateral-step1-implementation {
+  margin: 0 8px;
+  background: #9bb0f9;
+  width: 32%;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px 20px 0px 0px;
+  height: 51px;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Open Sans Semibold;
+}
+@media (max-width: 599px) {
+  .Lateral-step1-implementation {
+    font-weight: bold;
+    margin: 0 8px;
+    background: #9bb0f9;
+    width: 44%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px 20px 0px 0px;
+    height: 51px;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Open Sans Semibold;
+  }
+}

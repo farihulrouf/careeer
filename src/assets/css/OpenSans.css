@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url(https://app.elcarreira.com/static/media/OpenSans-Regular.629a55a7.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Semibold";
+  src: url(https://app.elcarreira.com/static/media/OpenSans-Semibold.33f225b8.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Light";
+  src: url(https://app.elcarreira.com/static/media/OpenSans-Light.1bf71be1.ttf)
+    format("truetype");
+}

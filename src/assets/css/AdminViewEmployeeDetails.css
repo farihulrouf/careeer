@@ -1,0 +1,69 @@
+.employeeDetails-mainDiv1 {
+  display: flex;
+  height: 100%;
+}
+.ant-modal-content1 {
+  height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.employeeDetails-item1 {
+  flex: 1;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: block;
+  padding: 2.5% 0 2% 3%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.header1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.cardName1 {
+  padding-left: 7%;
+  color: #303030;
+  font-family: Open Sans Semibold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.eachContent1 {
+  display: flex;
+  margin-bottom: 8px;
+}
+.employeeDetailsContainer1 {
+  border: 1px solid #ffffff;
+  display: block;
+  padding-left: 7%;
+}
+.line1 {
+  border: 1px solid #f9f9fa;
+  width: 60%;
+  margin-left: 18px;
+}
+.employeeDetails-firstpart1 {
+  flex: 1;
+  font-size: 14px;
+  color: #767676;
+  font-family: Open Sans Regular;
+  padding-right: 36px;
+}
+.employeeDetails-secondpart1 {
+  flex: 2;
+  color: #303030;
+  font-size: 14px;
+  font-family: Open Sans Regular;
+  padding-right: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.employeeDetailsHeading1 {
+  white-space: nowrap;
+  padding-left: 3%;
+  color: #303030;
+  font-size: 16px;
+  font-family: Open Sans Semibold;
+}

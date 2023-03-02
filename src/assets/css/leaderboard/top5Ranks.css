@@ -1,0 +1,239 @@
+.top-5-rank-contaimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rank-main-container {
+  display: flex;
+  width: 75%;
+  grid-template-columns: auto auto auto auto auto;
+  font-family: "Open Sans Regular";
+  padding-bottom: 4%;
+  align-items: flex-end;
+}
+
+.rank-user-image {
+  height: 4.75em;
+  width: 4.75em;
+  border-radius: 50%;
+}
+
+.rank-name {
+  margin-bottom: 3%;
+  margin-top: 1%;
+  color: rgb(48, 48, 48);
+  font-size: 1em;
+  font-family: "Open Sans Regular";
+}
+
+.points-badges-container {
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+  background-color: rgb(255, 128, 139);
+  padding: 1% 1% 1% 2%;
+  border-radius: 15px;
+  justify-content: space-around;
+}
+
+.points-container {
+  display: flex;
+  align-items: center;
+  /* margin-right: 20%; */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+.star-icon {
+  height: 0.875em;
+  width: 0.875em;
+}
+
+.badges-container {
+  display: flex;
+  align-items: center;
+}
+.fourth-rank-container {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.fourth-rank {
+  width: 100%;
+  height: 4em;
+  transform: skew(20deg);
+  background: linear-gradient(rgb(138, 140, 168) 0%, rgb(172, 174, 216) 53%);
+  margin-left: 50%;
+  margin-top: 5%;
+}
+
+.fourth-rank-label {
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-right: 50%;
+  margin-left: 50%;
+}
+
+.second-rank-container {
+  text-align: center;
+  justify-content: center;
+  height: 87.5%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.second-rank {
+  width: 92%;
+  height: 6em;
+  transform: skew(20deg);
+  background: linear-gradient(rgb(138, 140, 168) 0%, rgb(172, 174, 216) 53%);
+  margin-left: 5em;
+  margin-top: 5%;
+}
+
+.second-rank-label {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-right: 50%;
+  margin-left: 50%;
+}
+
+.first-rank-container {
+  text-align: center;
+  justify-content: center;
+  height: 74.5%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.first-rank {
+  border-bottom: 170px solid rgb(172, 174, 216);
+  border-right: 20px solid transparent;
+  height: 0px;
+  width: 85%;
+  transform: rotate(180deg);
+  margin-left: 10%;
+  margin-top: 6%;
+  margin-right: 10%;
+  border-left: 20px solid transparent;
+  z-index: 3;
+}
+
+.first-rank-label {
+  color: rgb(255, 255, 255);
+  font-size: 75px;
+  font-weight: 700;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  margin-right: 40%;
+  margin-left: 30%;
+  margin-top: 15%;
+}
+
+.third-rank-container {
+  text-align: center;
+  justify-content: center;
+  height: 87.5%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.third-rank {
+  width: 87%;
+  height: 6em;
+  transform: skew(-20deg);
+  background: linear-gradient(rgb(138, 140, 168) 0%, rgb(172, 174, 216) 53%);
+  margin-left: -3em;
+  margin-top: 5%;
+  z-index: 2;
+}
+.third-rank-label {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+.fifth-rank-container {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.fifth-rank {
+  width: 100%;
+  height: 4em;
+  transform: skew(-20deg);
+  background: linear-gradient(rgb(138, 140, 168) 0%, rgb(172, 174, 216) 53%);
+  margin-left: -55%;
+  margin-top: 5%;
+}
+
+.fifth-rank-label {
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-left: 50%;
+  margin-right: 40%;
+}
+@media (max-width: 885px) {
+  .fourth-rank {
+    margin-left: 45%;
+  }
+  .second-rank {
+    margin-left: 36%;
+  }
+  .third-rank {
+    margin-left: -21%;
+  }
+  .fifth-rank {
+    margin-left: -45%;
+  }
+}
+
+@media (max-width: 1180px) {
+  .fourth-rank-container,
+  .fifth-rank-container {
+    height: 101.7%;
+  }
+  .first-rank-container {
+    height: 75.5%;
+  }
+  .second-rank {
+    margin-left: 33%;
+  }
+  .third-rank {
+    margin-left: -23%;
+  }
+  .points-container {
+    margin-right: 10%;
+  }
+}

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Poppins-BoldItalic";
+  src: url(https://app.elcarreira.com/static/media/Poppins-BoldItalic.09775bde.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-SemiBoldItalic";
+  src: url(https://app.elcarreira.com/static/media/Poppins-SemiBoldItalic.378a091b.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Italic";
+  src: url(https://app.elcarreira.com/static/media/Poppins-Italic.5e956c44.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins Regular";
+  src: url(https://app.elcarreira.com/static/media/Poppins-Regular.8b6af8e5.ttf)
+    format("truetype");
+}

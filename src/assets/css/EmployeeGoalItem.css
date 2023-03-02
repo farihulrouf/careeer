@@ -1,0 +1,39 @@
+.timeDateContainer {
+  flex: 0.35;
+  display: flex;
+  padding-top: 22px;
+}
+.startDateContainer {
+  font-size: 0.875em;
+  color: #828282;
+}
+.endingDateContainer {
+  font-size: 0.875em;
+  color: #828282;
+  margin-left: 46px;
+  margin-right: 18px;
+}
+.dateTitle {
+  margin-bottom: 12px;
+  color: #303030;
+}
+@media (max-width: 768px) {
+  .timeDateContainer {
+    padding-top: 0px;
+    margin-bottom: 10px;
+  }
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .startDateContainer {
+    margin-left: 32px;
+    display: flex;
+  }
+  .endingDateContainer {
+    display: flex;
+  }
+  .dateTitle {
+    margin: 0px 10px 0px 0;
+  }
+}

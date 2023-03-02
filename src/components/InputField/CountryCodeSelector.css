@@ -1,0 +1,43 @@
+.code-list li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.code-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.code-list::-webkit-scrollbar {
+  width: 9px;
+  background-color: #ffffff;
+}
+
+.code-list::-webkit-scrollbar-thumb {
+  background-color: #9e9e9e;
+  border-radius: 20px;
+}
+
+.code-list::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.no_highlights {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

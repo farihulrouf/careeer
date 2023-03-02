@@ -1,0 +1,30 @@
+.ant-pagination {
+  --background: #f8f8f8;
+  --color: black;
+}
+.ant-pagination-prev .ant-pagination-item-link {
+  border: none;
+  background: inherit;
+}
+.ant-pagination-next .ant-pagination-item-link {
+  border: none;
+  background: inherit;
+}
+.ant-pagination-item-active a {
+  background: #4d4cac;
+  border-radius: 100%;
+  color: #ffffff;
+}
+.ant-pagination-item {
+  border: none;
+  border-radius: 100%;
+  background: #f8f8f8;
+}
+.ant-pagination-item-active:focus a,
+.ant-pagination-item-active:hover a {
+  color: #ffffff;
+}
+
+.ant-pagination-item-1 {
+  background: var(--background);
+}

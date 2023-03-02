@@ -1,0 +1,14 @@
+@import "../../../node_modules/antd/dist/antd.css";
+.ant-tooltip-inner {
+  font-size: 13px;
+  color: #7168bc;
+  background-color: #f1f1f8;
+  width: 180px;
+  letter-spacing: 0.01em;
+}
+
+.ant-tooltip-placement-bottom .ant-tooltip-arrow,
+.ant-tooltip-placement-bottomLeft .ant-tooltip-arrow,
+.ant-tooltip-placement-bottomRight .ant-tooltip-arrow {
+  border-bottom-color: #f1f1f8;
+}

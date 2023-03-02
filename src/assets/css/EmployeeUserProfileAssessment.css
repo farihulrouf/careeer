@@ -1,0 +1,133 @@
+.mainDiv-assesment {
+  display: flex;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.assesmentCard {
+  flex: 1;
+  width: 100%;
+  display: block;
+  padding: 4% 2% 4% 4%;
+}
+.assesmentHeading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2%;
+}
+.heading-title {
+  padding-left: 15px;
+  color: #303030;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: Open Sans SemiBold;
+}
+.headingLine {
+  width: 70%;
+  border: 0.5px solid #f5f6f7;
+}
+.assesmentDuration {
+  text-align: right;
+  display: flex;
+  padding-left: 60%;
+  padding-bottom: 2%;
+}
+.durationItem {
+  padding: 2px 10px 2px 10px;
+  border-radius: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: Open Sans SemiBold, Regular;
+}
+.assesmentContents {
+  display: block;
+  padding-left: 10%;
+  min-height: 60%;
+  max-height: 60%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.assesmentContents::-webkit-scrollbar {
+  width: 7px;
+  background-color: #ffffff;
+}
+
+/* Track */
+.assesmentContents::-webkit-scrollbar-track {
+  background: var(--track-color);
+}
+
+/* Handle */
+.assesmentContents::-webkit-scrollbar-thumb {
+  background: var(--thumb-color);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+.assesmentContents::-webkit-scrollbar-thumb:hover {
+  background: var(--thumb-hover-color);
+}
+.assesmentContents:hover {
+  --thumb-color: #bbb9b9;
+}
+
+.contents {
+  padding: 1.5%;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #f8f9fd;
+  margin-bottom: 5px;
+}
+.dot {
+  flex: 0.12;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid #acaed8;
+  background-color: #acaed8;
+  margin-bottom: 1.5%;
+}
+.assesments {
+  flex: 2.5;
+  padding-left: 5%;
+  padding-right: 1%;
+  width: 40%;
+}
+.assesmentNumber {
+  color: #303030;
+  font-family: Open Sans SemiBold, Regular;
+  font-size: 14px;
+  display: flex;
+  /* white-space: nowrap; */
+}
+.assesmentDate {
+  color: #8e8e8e;
+  font-family: "Poppins Regular";
+  font-size: 12px;
+}
+.skillScore {
+  flex: 2;
+  display: flex;
+  color: #303030;
+  font-family: Open Sans Regular;
+  font-size: 14px;
+  white-space: nowrap;
+  width: 30%;
+}
+.view {
+  cursor: pointer;
+  flex: 1.2;
+  color: #f46773;
+  font-family: Open Sans Regular;
+  font-size: 14px;
+  width: 30%;
+}

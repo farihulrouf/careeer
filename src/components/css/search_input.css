@@ -1,0 +1,54 @@
+html,
+body,
+#root,
+#App {
+  height: 100%;
+}
+
+.unOrderList li:hover {
+  background-color: #e8e4e4;
+}
+.unOrderList a {
+  color: #303030;
+}
+
+.unOrderList::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.unOrderList::-webkit-scrollbar {
+  width: 3px;
+  background-color: #ffffff;
+}
+
+.unOrderList::-webkit-scrollbar-thumb {
+  background-color: #bbb9b9;
+  border-radius: 20px;
+}
+
+.unOrderList::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+#InputField:hover {
+  border: 1.2px solid var(--hover);
+}
+
+#InputField {
+  --hover: rgb(247, 86, 137);
+  border: 1.2px solid rgb(222, 218, 218);
+}
+
+::placeholder {
+  color: #ababab;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #ababab;
+}
+
+::-ms-input-placeholder {
+  color: #ababab;
+}

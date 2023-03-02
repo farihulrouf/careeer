@@ -1,0 +1,49 @@
+:root {
+  --track-color: transparent;
+  --thumb-color: transparent;
+  --thumb-hover-color: #bbb9b9;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: var(--track-color);
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: var(--thumb-color);
+  border-radius: 20px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--thumb-hover-color);
+}
+.scroll-container:hover {
+  --thumb-color: #bbb9b9;
+}
+
+.user-profile-edit {
+  height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 5%;
+  color: #303030;
+  margin-bottom: 6%;
+}
+
+.user-profile-edit .onboarding-button-container {
+  position: absolute;
+  top: 88%;
+  width: 100%;
+  background: #fff;
+  left: 0%;
+  padding-right: 5%;
+}
+
+.dashboard-modal {
+  position: relative;
+}

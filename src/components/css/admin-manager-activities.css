@@ -1,0 +1,35 @@
+.listStyle {
+    color: #8a2be2;
+    font-size: 18px;
+}
+
+.listStyle span {
+    color: grey;
+    font-size: 15px;
+}
+
+.no-activities-message
+{
+    margin-left: 12px;
+    margin-top: 10px;
+}
+
+.main-container
+{
+    height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.date-time
+{
+    float: right !important;
+    text-align: right;
+    font-size: 16px;
+    color: grey 
+}
+
+.description
+{
+    float: left;
+}
