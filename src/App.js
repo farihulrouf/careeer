@@ -95,7 +95,13 @@ function App() {
         <div style={{ height: "100%", width: "100%" }}>
           <Router history={history}>
             <Switch>
-              <Route exact={true} path="/carerpath">
+              <Route exact={true} path="/login">
+                <LoginPage />
+              </Route>
+              <Route  path="/carerpath">
+                <Career />
+              </Route>
+              <Route path="/registeorganization">
                 <RegisterOrganisation />
               </Route>
               <Route path="/notauthorised">
