@@ -70,7 +70,7 @@ const Career = () => {
             <h1 className="text-2xl text-green-700">Dashboard</h1>
           </div>
           <div className="mb-2 w-full flex">
-            <div className="w-2/3 justify-center gap-4 items-center flex">
+            <div className="w-3/5 justify-center gap-4 items-center flex">
               <div className="text-center text-indigo-500 font-semibold">
                 <ul>
                   <li className="text-lg">800</li>
@@ -186,7 +186,7 @@ const Career = () => {
           <div className="w-1/2">
             <h3 className="text-lg">Competency Matrix </h3>
             <div className="shadow-sm border rounded-md h-[450px] flex">
-              <div className="w-2/3 h-full relative">
+              <div className="w-3/5 h-full relative">
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
                   <p className="text-indigo-500 text-lg font-bold text-center">800<br /><span className="text-sm">USERS</span></p>
                 </div>
@@ -200,11 +200,25 @@ const Career = () => {
                   />
                 </div>
               </div>
-              <div className="w-1/3 flex items-center justify-center">
-                <ul className="p-2 text-lg font-semibold">
-                  <li className="text-blue-700">C1 = Beginner</li>
-                  <li className="text-red-400">C2 = Intermediete</li>
-                  <li className="text-orange-400">C3 = Expert</li>
+              <div className="w-2/5">
+                <div className="flex space-x-2 mt-16">
+                    <div>
+                      <h4 className="text-4xl font-bold">10</h4>
+                      <button className="bg-red-500 text-white px-2 py-2 rounded-xl w-28">
+                        Taken one Assesment
+                      </button>
+                    </div>
+                    <div>
+                      <h4 className="text-4xl font-bold">25</h4>
+                      <button className="text-white bg-green-500 px-2 py-2 rounded-xl w-28">
+                        Taken two Assesment
+                      </button>
+                    </div>
+                </div>
+                <ul className="p-2 text-lg font-semibold mt-6">
+                  <li className="text-blue-700 w-36 justify-between flex"><span>Beginner</span> <span className="text-black">10</span></li>
+                  <li className="text-red-400 w-36 justify-between flex"><span>Intermediate</span> <span className="text-black">20</span></li>
+                  <li className="text-orange-400 w-36 justify-between flex"><span>Expert</span> <span className="text-black">05</span></li>
                 </ul>
               </div>
             </div>
