@@ -5,9 +5,9 @@ import { BiRun } from "react-icons/bi"
 import { Chart } from "react-google-charts";
 import Dropdown from 'react-multilevel-dropdown';
 import DataTable from 'react-data-table-component';
+import NavBar from "../../components/NavBar";
 
-
-
+import NavSub from "../../components/NavSub";
 const customStyles = {
   rows: {
     style: {
@@ -47,6 +47,7 @@ export const data = [
 export const options = {
   legend: "none",
   pieSliceText: "label",
+  pieStartAngle: 100,
   sliceVisibilityThreshold: 0.2, // 20%
 
 };
@@ -142,10 +143,14 @@ const Career = () => {
   }
   return (
     <>
+      <div className="container mx-auto">
+         <NavBar />
+         <NavSub />
+      </div>
       <div className="container mx-auto p-4 min-h-full bg-gray-50">
         <div className="bg-gray-50">
           <div>
-            <h1 className="text-xl text-white bg-indigo-700 px-2 py-2 w-52 rounded-sm">Analytics Dashboard</h1>
+            <h1 className="text-lg text-black px-2 py-2 w-52 rounded-sm">Analytics Dashboard</h1>
           </div>
           <div className="mb-2 w-full justify-between flex">
             <div>
