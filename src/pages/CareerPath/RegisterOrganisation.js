@@ -8,17 +8,20 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
+import NavBar from "../../components/NavBar";
 
+import NavSub from "../../components/NavSub";
 // Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/fancy-example.css';
 const RegisterOrganisation = () => {
     return (
         <>
+            <div className='container mx-auto'>
+                <NavBar />
+                <NavSub />
+            </div>  
             <div className="container mx-auto p-4 min-h-full bg-gray-50">
                <div className='bg-white'>
-               <div>
-                    <h4 className='text-2xl text-center'>Organisation audit register screen</h4>
-                </div>
                 <div className='p-2'>
                     <p className="text-indigo-600 font-semibold text-lg">Audit</p>
                 </div>
