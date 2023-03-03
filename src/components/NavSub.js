@@ -1,8 +1,9 @@
 import { RxDashboard } from "react-icons/rx"
 import { GiTrophyCup } from "react-icons/gi"
-import { AiOutlineUser } from "react-icons/ai"
+import { AiOutlineUser, AiOutlineEdit } from "react-icons/ai"
 import { HiOutlineDocumentReport } from 'react-icons/hi'
 import { TbChartInfographic } from 'react-icons/tb'
+
 const NavSub = () => {
     const doSomething = () => {
         console.log('tes')
@@ -10,7 +11,7 @@ const NavSub = () => {
     return (
         <div>
            <ul className="flex space-x-6 m-6 text-md font-semibold">
-                <li>Audit</li>
+                <li className="flex space-x-2 items-center"><AiOutlineEdit />Audit</li>
                 <li className="flex space-x-2 items-center"><RxDashboard /> Dashboard</li>
                 <li className="flex space-x-2 items-center"><GiTrophyCup /> Leaderboard</li>
                 <li className="flex space-x-2 items-center"><AiOutlineUser /> User Management</li>

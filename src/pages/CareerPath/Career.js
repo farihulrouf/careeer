@@ -154,12 +154,12 @@ const Career = () => {
           </div>
           <div className="mb-2 w-full justify-between flex">
             <div>
-              <div className="flex space-x-2">
+              <div className="flex space-x-6">
                 <div className="text-center font-semibold flex items-center">
-                  <ul className="w-44 relative drop-shadow-lg rounded-md bg-gradient-to-r from-yellow-400 bg-pink-300 p-2 hover:text-white hover:bg-indigo-500">
-                    <p className="absolute text-white text-lg top-2/3 transform -translate-y-1/2">26</p>
-                    <li className="text-black text-xl">Total Employees</li>
-                    <li className="text-xl text-black">800</li>
+                  <ul className="w-64 relative drop-shadow-lg rounded-md bg-gradient-to-r from-yellow-400 bg-pink-300 p-2 hover:text-white hover:bg-indigo-500">
+                    <p className="absolute text-white text-xl top-2/3 transform -translate-y-1/2">26</p>
+                    <li className="text-black text-2xl">Total Employees</li>
+                    <li className="text-2xl text-black">800</li>
                     <div className="absolute  text-white text-md bottom-1 right-1">
                       <AiOutlineUsergroupDelete size={24} />
                     </div>
@@ -167,20 +167,20 @@ const Career = () => {
                 </div>
 
                 <div className="text-center font-semibold flex items-center">
-                  <ul className="w-44 relative drop-shadow-lg rounded-md bg-gradient-to-r from-pink-300 bg-pink-500 text-white p-2 hover:text-white hover:bg-indigo-500">
-                    <p className="absolute text-white text-lg top-2/3 transform -translate-y-1/2">4</p>
-                    <li className="text-black text-xl">Exit Employees</li>
-                    <li className="text-xl text-black">200</li>
+                  <ul className="w-64 relative drop-shadow-lg rounded-md bg-gradient-to-r from-pink-300 bg-pink-500 text-white p-2 hover:text-white hover:bg-indigo-500">
+                    <p className="absolute text-white text-xl top-2/3 transform -translate-y-1/2">4</p>
+                    <li className="text-black text-2xl">Exit Employees</li>
+                    <li className="text-2xl text-black">200</li>
                     <div className="absolute  text-white text-md bottom-1 right-1">
                       <BiRun size={24} />
                     </div>
                   </ul>
                 </div>
                 <div className="text-center font-semibold flex items-center">
-                  <ul className="w-44 relative drop-shadow-lg rounded-md bg-gradient-to-r from-green-200 bg-green-500 text-white p-2 hover:text-white hover:bg-indigo-500">
-                    <p className="absolute text-white text-lg top-2/3 transform -translate-y-1/2">5</p>
-                    <li className="text-black text-xl">Attrition</li>
-                    <li className="text-xl text-black">10%</li>
+                  <ul className="w-64 relative drop-shadow-lg rounded-md bg-gradient-to-r from-green-200 bg-green-500 text-white p-2 hover:text-white hover:bg-indigo-500">
+                    <p className="absolute text-white text-xl top-2/3 transform -translate-y-1/2">5</p>
+                    <li className="text-black text-2xl">Attrition</li>
+                    <li className="text-2xl text-black">10%</li>
 
                     <div className="absolute  text-white text-md bottom-1 right-1">
                       <AiFillGold size={24} />
@@ -190,11 +190,11 @@ const Career = () => {
               </div>
             </div>
 
-            <div className="text-left font-semibold flex items-center">
-              <ul className="bg-red-400 drop-shadow-lg  rounded-md p-2 hover:text-white hover:bg-indigo-500">
-                <li className="text-xl text-black">Top Dept On Leader board</li>
-                <li className="relative text-lg">
-                  Cient Services <span className="ml-2 text-black text-xl">486</span>
+            <div className="text-left font-semibold flex items-center w-96">
+              <ul className="bg-red-400 w-full drop-shadow-lg text-center rounded-md p-2 hover:text-white hover:bg-indigo-500">
+                <li className="text-2xl text-black">Top Dept On Leader board</li>
+                <li className="relative text-2xl">
+                  Cient Services <span className="ml-2 text-black font-bold text-sxl">486</span>
                 </li>
               </ul>
             </div>
