@@ -63,7 +63,7 @@ export const optionstwo = {
 export const dataBar = [
   [
     "Month",
-    "Quarter",
+    "",
   ],
   ["Q1", 100,],
   ["Q2", 50,],
@@ -72,7 +72,7 @@ export const dataBar = [
 ];
 
 export const optionsBar = {
-  title: "Attrition",
+ 
   vAxis: { title: "Y-Axis" },
   hAxis: { title: "X-Axis" },
   seriesType: "bars",
@@ -272,8 +272,8 @@ const Career = () => {
                   />
                 </div>
               </div>
-              <div className="w-2/5">
-                <div className="flex space-x-2 mt-16">
+              <div className="w-2/5 flex flex-col justify-center items-center">
+                <div className="flex space-x-2">
                     <div className="text-center">
                       <h4 className="text-4xl font-bold">10</h4>
                       <button className="bg-red-500 text-white px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
@@ -288,9 +288,9 @@ const Career = () => {
                     </div>
                 </div>
                 <ul className="p-2 text-lg font-semibold mt-6">
-                  <li className="text-blue-700 w-36 justify-between flex"><span>Beginner</span> <span className="text-black">10</span></li>
-                  <li className="text-red-400 w-36 justify-between flex"><span>Intermediate</span> <span className="text-black">20</span></li>
-                  <li className="text-orange-400 w-36 justify-between flex"><span>Expert</span> <span className="text-black">05</span></li>
+                  <li className="text-blue-700 w-44 justify-between flex"><span>Beginner</span> <span className="text-black">10</span></li>
+                  <li className="text-red-400 w-44 justify-between flex"><span>Intermediate</span> <span className="text-black">20</span></li>
+                  <li className="text-orange-400 w-44 justify-between flex"><span>Expert</span> <span className="text-black">05</span></li>
                 </ul>
               </div>
             </div>
