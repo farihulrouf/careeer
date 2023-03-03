@@ -67,41 +67,42 @@ const Career = () => {
       <div className="container mx-auto p-4 min-h-full bg-gray-50">
         <div className="bg-gray-50">
           <div>
-            <h1 className="text-2xl text-green-700">Dashboard</h1>
+            <h1 className="text-xl text-white bg-indigo-700 px-2 py-2 w-52 rounded-sm">Analytics Dashboard</h1>
           </div>
           <div className="mb-2 w-full flex">
-            <div className="w-3/5 justify-center gap-4 items-center flex">
-              <div className="text-center text-indigo-500 font-semibold">
-                <ul>
+            <div className="w-1/3 justify-center gap-4 items-center flex">
+             
+            </div>
+            <div className="w-2/3 flex justify-end space-x-1">
+              <div className="text-center font-semibold flex items-center">
+                <ul className="bg-teal-500 text-white p-2 hover:text-white hover:bg-indigo-500">
                   <li className="text-lg">800</li>
                   <li>Total Users</li>
                 </ul>
               </div>
-              <div className="text-center text-red-500 font-semibold">
-                <ul>
+
+              <div className="text-center font-semibold flex items-center">
+                <ul className="bg-pink-500 text-white p-2 hover:text-white hover:bg-indigo-500">
                   <li className="text-lg">200</li>
                   <li>Exit Employees</li>
                 </ul>
               </div>
-              <div className="text-center text-yellow-500 font-semibold">
-                <ul>
-                  <li className="text-lg">100%</li>
-                  <li>Attention</li>
+              <div className="text-center font-semibold flex items-center">
+                <ul className="bg-orange-500 text-white p-2 hover:text-white hover:bg-indigo-500">
+                  <li className="text-lg">10%</li>
+                  <li>Attrition</li>
                 </ul>
               </div>
-            </div>
-            <div className="w-1/3 flex justify-end space-x-4">
-              <div className="font-semibold">
-                <p>Top Department</p>
-                <p className="text-indigo-500">Cient Services</p>
+              <div className="text-left font-semibold flex items-center">
+                <ul className="bg-indigo-700 text-white p-2 hover:text-white hover:bg-indigo-500">
+                  <li className="text-lg">Top Dept On Leader board</li>
+                  <li className="relative">
+                    Cient Services <span className="text-red-500 ml-2">486</span>
+                    <AiOutlineTrophy className="text-pink-700 absolute right-0 top-0"  size={28}/>
+                  </li>
+                </ul>
               </div>
-              <div className="font-semibold">
-                <p>On Leader board</p>
-                <div className="flex space-x-2 item-center">
-                  <p className="text-green-800 text-2xl">486</p>
-                  <AiOutlineTrophy className="text-pink-500" size={32} />
-                </div>
-              </div>
+             
             </div>
           </div>
           <div className="w-full flex justify-end">
@@ -202,13 +203,13 @@ const Career = () => {
               </div>
               <div className="w-2/5">
                 <div className="flex space-x-2 mt-16">
-                    <div>
+                    <div className="text-center">
                       <h4 className="text-4xl font-bold">10</h4>
                       <button className="bg-red-500 text-white px-2 py-2 rounded-xl w-28">
                         Taken one Assesment
                       </button>
                     </div>
-                    <div>
+                    <div className="text-center">
                       <h4 className="text-4xl font-bold">25</h4>
                       <button className="text-white bg-green-500 px-2 py-2 rounded-xl w-28">
                         Taken two Assesment
