@@ -50,8 +50,8 @@ export const dataBar = [
 
 export const optionsBar = {
   title: "ATTRITION ANALYTIC",
-  vAxis: { title: "ATTRITION" },
-  hAxis: { title: "Month" },
+  vAxis: { title: "Y" },
+  hAxis: { title: "X" },
   seriesType: "bars",
   series: { 3: { type: "line" } },
 };
