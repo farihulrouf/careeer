@@ -1,6 +1,6 @@
 import { FaTelegramPlane } from "react-icons/fa"
-
 import Dropdown from 'react-multilevel-dropdown';
+import DropdownUser from "./DropdownUser";
 const NavBar = () => {
     const doSomething = () => {
         console.log('tes')
@@ -19,43 +19,7 @@ const NavBar = () => {
             <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                 <div className="text-sm lg:flex-grow">
                 </div>
-                <div className="bg-indigo-700 text-white drop-shadow-lg rounded-sm flex space-x-2 px-1 items-center">
-                <Dropdown
-                  className="bg-indigo-700"
-                  title='Filter'
-
-                >
-                  <Dropdown.Item
-                    onClick={() => doSomething()}
-                  >
-                    <p className="text-lg font-semibold">Departments</p>
-                    <Dropdown.Submenu>
-                      <Dropdown.Item>
-                        Department 1
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        Department 2
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        Department 3
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        Department 4
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        Department 5
-                      </Dropdown.Item>
-                    </Dropdown.Submenu>
-                  </Dropdown.Item>
-                  <div className="w-32 h-24 relative">
-                    <div className="flex justify-between w-full absolute bottom-0 ml-2">
-                      <button className="text-white bg-black h-6 px-2 rounded-sm">Clear</button>
-                      <button className="text-white bg-teal-500 h-6 px-2 rounded-sm">Submit</button>
-                    </div>
-                  </div>
-                </Dropdown>
-                <FaTelegramPlane />
-              </div>
+                <DropdownUser />
               
             </div>
         </nav>
