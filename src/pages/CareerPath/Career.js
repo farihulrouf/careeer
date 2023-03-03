@@ -19,6 +19,8 @@ const customStyles = {
       paddingLeft: '8px', // override the cell padding for head cells
       paddingRight: '8px',
       fontSize: '16px',
+      display: 'flex',
+      justifyContent: 'center',
 
     },
   },
@@ -27,15 +29,19 @@ const customStyles = {
       paddingLeft: '8px', // override the cell padding for data cells
       paddingRight: '8px',
       fontSize: '14px',
+      display: 'flex',
+      justifyContent: 'center',
+      
 
     },
+    
   },
 };
 
 export const data = [
   ["Skill Gap Covered", "Skill Gap"],
-  ["Covered", 40],
-  ["Skill Gap", 60],
+  ["Skill Gap Covered", 60],
+  ["Skill Gap", 40],
 ];
 
 export const options = {
@@ -330,7 +336,7 @@ const Career = () => {
                   columns={columnstable}
                   data={datatable}
                   customStyles={customStyles}
-                  pagination
+                  pagination={5}
                 />
               </div>
 
