@@ -139,7 +139,7 @@ const Career = () => {
       <div className="container mx-auto p-4 min-h-full bg-gray-50">
         <div className="bg-gray-50">
           <div>
-            <h1 className="text-xl text-white bg-indigo-700 px-2 py-2 w-52 rounded-sm">Analytics Dashboard</h1>
+            <h1 className="text-xl text-white bg-indigo-700 drop-shadow-lg px-2 py-2 w-52 rounded-sm">Analytics Dashboard</h1>
           </div>
           <div className="mb-2 w-full justify-between flex">
             <div>
@@ -190,7 +190,7 @@ const Career = () => {
           </div>
           <div className="w-full flex justify-end">
             <div className="flex space-x-2 mb-1">
-              <div className="bg-indigo-700 text-white flex space-x-2 px-1 items-center">
+              <div className="bg-indigo-700 text-white drop-shadow-lg rounded-sm flex space-x-2 px-1 items-center">
                 <Dropdown
                   className="bg-indigo-700"
                   title='Filter'
@@ -227,7 +227,7 @@ const Career = () => {
                 </Dropdown>
                 <AiOutlineFilter />
               </div>
-              <button className="px-2 bg-green-600 text-white py-1 flex space-x-1 items-center"><span>Download Pdf</span><AiOutlineFilePdf /></button>
+              <button className="px-2 bg-green-600 text-white py-1 drop-shadow-lg rounded-sm flex space-x-1 items-center"><span>Download Pdf</span><AiOutlineFilePdf /></button>
             </div>
           </div>
         </div>
@@ -288,13 +288,13 @@ const Career = () => {
                 <div className="flex space-x-2">
                   <div className="text-center">
                     <h4 className="text-4xl font-bold">10</h4>
-                    <button className="bg-red-500 text-white px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
+                    <button className="bg-red-500 drop-shadow-lg text-white px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                       Taken one Assesment
                     </button>
                   </div>
                   <div className="text-center">
                     <h4 className="text-4xl font-bold">25</h4>
-                    <button className="text-white bg-green-500 px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
+                    <button className="text-white bg-green-500 drop-shadow-lg px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                       Taken two Assesment
                     </button>
                   </div>
