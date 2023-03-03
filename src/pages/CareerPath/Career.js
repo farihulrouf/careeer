@@ -114,9 +114,15 @@ const datatable = [
     leader: '486',
     position: '20 PTS'
 },
-{
-    id: 4,
-    title: 'TAL-CS',
+  {
+      id: 4,
+      title: 'TAL-CS',
+      leader: '486',
+      position: '20 PTS'
+  },
+  {
+    id: 5,
+    title: 'TAL-TX',
     leader: '486',
     position: '20 PTS'
 },
@@ -270,13 +276,13 @@ const Career = () => {
                 <div className="flex space-x-2 mt-16">
                     <div className="text-center">
                       <h4 className="text-4xl font-bold">10</h4>
-                      <button className="bg-red-500 text-white px-2 py-2 rounded-xl w-28">
+                      <button className="bg-red-500 text-white px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                         Taken one Assesment
                       </button>
                     </div>
                     <div className="text-center">
                       <h4 className="text-4xl font-bold">25</h4>
-                      <button className="text-white bg-green-500 px-2 py-2 rounded-xl w-28">
+                      <button className="text-white bg-green-500 px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                         Taken two Assesment
                       </button>
                     </div>
@@ -325,42 +331,42 @@ const Career = () => {
             <h3 className="text-lg">Career Path</h3>
             <div className="shadow-sm border h-[300px] flex items-center">
               <div className="flex p-4 justify-center items-center flex-wrap gap-4 mt-4 mb-4">
-                <div className="w-48 bg-white drop-shadow-md">
+                <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
                     <li className="text-orange-700 text-3xl font-bold">400</li>
                     <li className="text-indigo-900">Career Path</li>
                     <li className="text-indigo-900">Assigned To Employees</li>
                   </ul>
                 </div>
-                <div className="w-48 bg-white drop-shadow-md">
+                <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
                     <li className="text-orange-700 text-3xl font-bold">400</li>
                     <li className="text-indigo-900">Career PATH</li>
                     <li className="text-indigo-900">Registered</li>
                   </ul>
                 </div>
-                <div className="w-48 bg-white drop-shadow-md">
+                <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
                     <li className="text-orange-700 text-3xl font-bold">100</li>
                     <li className="text-indigo-900">Upward Path</li>
                     <li className="text-indigo-900">Propposed</li>
                   </ul>
                 </div>
-                <div className="w-48 bg-white drop-shadow-md">
+                <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
                     <li className="text-orange-700 text-3xl font-bold">50</li>
                     <li className="text-indigo-900">Aalternate Path</li>
                     <li className="text-indigo-900">Propposed</li>
                   </ul>
                 </div>
-                <div className="w-48 bg-white drop-shadow-md">
+                <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
                     <li className="text-orange-700 text-3xl font-bold">40</li>
                     <li className="text-indigo-900">Denied Path</li>
                     <li className="text-indigo-900">Career Path</li>
                   </ul>
                 </div>
-                <div className="w-48 bg-white drop-shadow-md">
+                <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
                     <li className="text-orange-700 text-3xl font-bold">10</li>
                     <li className="text-indigo-900">Propposed PATH</li>
@@ -385,37 +391,37 @@ const Career = () => {
                 <div className="w-40 h-8 bg-red-500">
                 </div>
               </div>
-              <div className="w-full p-4 flex">
-                <ul className="text-center font-semibold w-48">
-                  <li className="text-gray-400">On Boarding</li>
-                  <li className="text-gray-400">Process Commited</li>
-                  <li className="text-orange-700 text-2xl">10</li>
+              <div className="w-full p-4 flex gap-2">
+                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100">
+                  <li className="text-orange-900">On Boarding</li>
+                  <li className="text-orange-900">Process Commited</li>
+                  <li className="text-orange-700 text-3xl">10</li>
                 </ul>
 
-                <ul className="text-center font-semibold w-48 border-l-2 border-r-2">
-                  <li className="text-gray-400">Assesments</li>
-                  <li className="text-gray-400">Taken</li>
-                  <li className="text-orange-700 text-2xl">80</li>
+                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100">
+                  <li className="text-orange-900">Assesments</li>
+                  <li className="text-orange-900">Taken</li>
+                  <li className="text-orange-700 text-3xl">80</li>
                 </ul>
 
-                <ul className="text-center font-semibold w-48">
-                  <li className="text-gray-400">Technical</li>
-                  <li className="text-gray-400">Assesments</li>
-                  <li className="text-orange-700 text-2xl">60</li>
+                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100">
+                  <li className="text-orange-900">Technical</li>
+                  <li className="text-orange-900">Assesments</li>
+                  <li className="text-orange-700 text-3xl">60</li>
                 </ul>
 
               </div>
-              <div className="w-full p-4 flex">
-                <ul className="text-center font-semibold w-48">
-                  <li className="text-gray-400">Inner Personal</li>
-                  <li className="text-gray-400">Assesment</li>
-                  <li className="text-orange-700 text-2xl">20</li>
+              <div className="w-full p-4 flex gap-2">
+                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100">
+                  <li className="text-orange-900">Inner Personal</li>
+                  <li className="text-orange-900">Assesment</li>
+                  <li className="text-orange-700 text-3xl">20</li>
                 </ul>
 
-                <ul className="text-center font-semibold w-48 border-l-2">
-                  <li className="text-gray-400">Login</li>
-                  <li className="text-gray-400">Activitiy</li>
-                  <li className="text-orange-700 text-2xl">350</li>
+                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100">
+                  <li className="text-orange-900">Login</li>
+                  <li className="text-orange-900">Activitiy</li>
+                  <li className="text-orange-700 text-3xl">350</li>
                 </ul>
 
 
