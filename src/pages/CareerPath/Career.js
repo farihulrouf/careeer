@@ -139,7 +139,7 @@ const Career = () => {
       <div className="container mx-auto p-4 min-h-full bg-gray-50">
         <div className="bg-gray-50">
           <div>
-            <h1 className="text-xl text-white bg-indigo-700 drop-shadow-lg px-2 py-2 w-52 rounded-sm">Analytics Dashboard</h1>
+            <h1 className="text-xl text-white bg-indigo-700 px-2 py-2 w-52 rounded-sm">Analytics Dashboard</h1>
           </div>
           <div className="mb-2 w-full justify-between flex">
             <div>
@@ -237,7 +237,7 @@ const Career = () => {
             <h3 className="text-lg">Overall Skill Gap</h3>
             <div className="w-full flex rounded-md h-[450px] drop-shadow-lg">
               <div className="w-1/2 bg-white">
-                <div className="p-2 bg-white ">
+                <div className="p-2 bg-white h-full w-full ">
                   <Chart
                     chartType="PieChart"
                     data={data}
@@ -274,7 +274,7 @@ const Career = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
                   <p className="text-indigo-500 text-lg font-bold text-center">800<br /><span className="text-sm">USERS</span></p>
                 </div>
-                <div className="p-2 bg-white">
+                <div className="p-2 bg-white h-full w-full">
                   <Chart
                     chartType="PieChart"
                     data={datatwo}
@@ -288,13 +288,13 @@ const Career = () => {
                 <div className="flex space-x-2">
                   <div className="text-center">
                     <h4 className="text-4xl font-bold">10</h4>
-                    <button className="bg-red-500 drop-shadow-lg text-white px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
+                    <button className="bg-red-500 text-white px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                       Taken one Assesment
                     </button>
                   </div>
                   <div className="text-center">
                     <h4 className="text-4xl font-bold">25</h4>
-                    <button className="text-white bg-green-500 drop-shadow-lg px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
+                    <button className="text-white bg-green-500 px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                       Taken two Assesment
                     </button>
                   </div>
