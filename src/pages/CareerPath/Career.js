@@ -3,9 +3,32 @@ import ProgressBar from "../../components/chart/ProgressBar";
 import { AiOutlineFilter, AiOutlineFilePdf, AiOutlineTrophy } from "react-icons/ai";
 import { Chart } from "react-google-charts";
 import Dropdown from 'react-multilevel-dropdown';
+import DataTable from 'react-data-table-component';
 
-const className = {
 
+
+const customStyles = {
+  rows: {
+      style: {
+          minHeight: '64px', // override the row height
+      },
+  },
+  headCells: {
+      style: {
+          paddingLeft: '8px', // override the cell padding for head cells
+          paddingRight: '8px',
+          fontSize: '16px',
+        
+      },
+  },
+  cells: {
+      style: {
+          paddingLeft: '8px', // override the cell padding for data cells
+          paddingRight: '8px',
+          fontSize: '14px',
+
+      },
+  },
 };
 
 export const data = [
@@ -40,7 +63,7 @@ export const optionstwo = {
 export const dataBar = [
   [
     "Month",
-    "Quartal",
+    "Quarter",
   ],
   ["Q1", 100,],
   ["Q2", 50,],
@@ -49,13 +72,55 @@ export const dataBar = [
 ];
 
 export const optionsBar = {
-  title: "ATTRITION ANALYTIC",
-  vAxis: { title: "Y" },
-  hAxis: { title: "X" },
+  title: "Attrition",
+  vAxis: { title: "Y-Axis" },
+  hAxis: { title: "X-Axis" },
   seriesType: "bars",
   series: { 3: { type: "line" } },
 };
 
+
+const columnstable = [
+  {
+      name: 'Department Name',
+      selector: row => row.title,
+  },
+  {
+      name: 'Leader Board PTS',
+      selector: row => row.leader,
+  },
+  {
+    name: 'Position Moved',
+    selector: row => row.position,
+},
+];
+
+const datatable = [
+  {
+      id: 1,
+      title: 'TAL-CS',
+      leader: '486',
+      position: '20 PTS'
+  },
+  {
+      id: 2,
+      title: 'TAL-CS',
+      leader: '486',
+      position: '20 PTS'
+  },
+  {
+    id: 3,
+    title: 'TAL-CS',
+    leader: '486',
+    position: '20 PTS'
+},
+{
+    id: 4,
+    title: 'TAL-CS',
+    leader: '486',
+    position: '20 PTS'
+},
+]
 
 
 const Career = () => {
@@ -243,83 +308,14 @@ const Career = () => {
             <h3 className="text-lg"> Leaderboard Analytics </h3>
             <div className="shadow-sm border rounded-md h-[400px]">
               <div className="w-full p-2">
-                <table className="table-auto w-full">
-                  <thead className="bg-indigo-600 text-white">
-                    <tr className="text-left text-lg">
-                      <th>No</th>
-                      <th>Dept Name</th>
-                      <th>Leader Board PTS</th>
-                      <th>Year</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="text-left text-lg">
-                      <td>1</td>
-                      <td>Cient Services</td>
-                      <td >486</td>
-                      <td>20 ptst</td>
-                    </tr>
-                    <tr className="text-left text-lg">
-                      <td>2</td>
-                      <td>TAL-CS</td>
-                      <td>486</td>
-                      <td>20 ptst</td>
-                    </tr>
-                    <tr className="text-left text-lg">
-                      <td>3</td>
-                      <td>TAL-CS</td>
-                      <td>486</td>
-                      <td>20 ptst</td>
-                    </tr>
-                    <tr className="text-left text-lg">
-                      <td>4</td>
-                      <td>TAL-CS</td>
-                      <td>486</td>
-                      <td>20 ptst</td>
-                    </tr>
-                    <tr className="text-left text-lg">
-                      <td>5</td>
-                      <td>TAL-CS</td>
-                      <td>486</td>
-                      <td>20 ptst</td>
-                    </tr>
-                    <tr className="text-left text-lg">
-                      <td>6</td>
-                      <td>TAL-CS</td>
-                      <td>486</td>
-                      <td>20 ptst</td>
-                    </tr>
-                    <tr className="text-left text-lg">
-                      <td>7</td>
-                      <td>TAL-CS</td>
-                      <td>486</td>
-                      <td>20 ptst</td>
-                    </tr>
-                    <tr className="text-left text-lg">
-                      <td>8</td>
-                      <td>TAL-CS</td>
-                      <td>486</td>
-                      <td>20 ptst</td>
-                    </tr>
-                    <tr className="text-left text-lg">
-                      <td>9</td>
-                      <td>TAL-CS</td>
-                      <td>486</td>
-                      <td>20 ptst</td>
-                    </tr>
-                    <tr className="text-left text-lg">
-                      <td>10</td>
-                      <td>TAL-CS</td>
-                      <td>486</td>
-                      <td>20 ptst</td>
-                    </tr>
-
-                  </tbody>
-                </table>
+              <DataTable
+                  columns={columnstable}
+                  data={datatable}
+                  customStyles={customStyles}
+                  pagination
+              />
               </div>
-              <div className="flex justify-end p-2 mr-12">
-                <button className="px-2 py-1 bg-indigo-500 text-white font-semibold">View all</button>
-              </div>
+              
             </div>
 
           </div>
@@ -329,46 +325,46 @@ const Career = () => {
             <h3 className="text-lg">Career Path</h3>
             <div className="shadow-sm border h-[300px] flex items-center">
               <div className="flex p-4 justify-center items-center flex-wrap gap-4 mt-4 mb-4">
-                <div className="w-48">
+                <div className="w-48 bg-white drop-shadow-md">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-2xl">400</li>
-                    <li className="text-gray-400">Career Path</li>
-                    <li className="text-gray-400">Assigned To Employees</li>
+                    <li className="text-orange-700 text-3xl font-bold">400</li>
+                    <li className="text-indigo-900">Career Path</li>
+                    <li className="text-indigo-900">Assigned To Employees</li>
                   </ul>
                 </div>
-                <div className="w-48">
+                <div className="w-48 bg-white drop-shadow-md">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-2xl">400</li>
-                    <li className="text-gray-400">Career PATH</li>
-                    <li className="text-gray-400">Registered</li>
+                    <li className="text-orange-700 text-3xl font-bold">400</li>
+                    <li className="text-indigo-900">Career PATH</li>
+                    <li className="text-indigo-900">Registered</li>
                   </ul>
                 </div>
-                <div className="w-48">
+                <div className="w-48 bg-white drop-shadow-md">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-2xl">100</li>
-                    <li className="text-gray-400">Upward Path</li>
-                    <li className="text-gray-400">Propposed</li>
+                    <li className="text-orange-700 text-3xl font-bold">100</li>
+                    <li className="text-indigo-900">Upward Path</li>
+                    <li className="text-indigo-900">Propposed</li>
                   </ul>
                 </div>
-                <div className="w-48">
+                <div className="w-48 bg-white drop-shadow-md">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-2xl">50</li>
-                    <li className="text-gray-400">Aalternate Path</li>
-                    <li className="text-gray-400">Propposed</li>
+                    <li className="text-orange-700 text-3xl font-bold">50</li>
+                    <li className="text-indigo-900">Aalternate Path</li>
+                    <li className="text-indigo-900">Propposed</li>
                   </ul>
                 </div>
-                <div className="w-48">
+                <div className="w-48 bg-white drop-shadow-md">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-2xl">40</li>
-                    <li className="text-gray-400">Denied Path</li>
-                    <li className="text-gray-400">Career Path</li>
+                    <li className="text-orange-700 text-3xl font-bold">40</li>
+                    <li className="text-indigo-900">Denied Path</li>
+                    <li className="text-indigo-900">Career Path</li>
                   </ul>
                 </div>
-                <div className="w-48">
+                <div className="w-48 bg-white drop-shadow-md">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-2xl">10</li>
-                    <li className="text-gray-400">Propposed PATH</li>
-                    <li className="text-gray-400">Moved To Role</li>
+                    <li className="text-orange-700 text-3xl font-bold">10</li>
+                    <li className="text-indigo-900">Propposed PATH</li>
+                    <li className="text-indigo-900">Moved To Role</li>
                   </ul>
                 </div>
               </div>
