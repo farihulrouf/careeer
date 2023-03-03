@@ -10,7 +10,7 @@ import DataTable from 'react-data-table-component';
 const customStyles = {
   rows: {
       style: {
-          minHeight: '64px', // override the row height
+          minHeight: '50px', // override the row height
       },
   },
   headCells: {
@@ -329,8 +329,8 @@ const Career = () => {
         <div className="w-full flex space-x-4 bg-white p-2">
           <div className="w-1/2">
             <h3 className="text-lg">Career Path</h3>
-            <div className="shadow-sm border h-[300px] flex items-center">
-              <div className="flex p-4 justify-center items-center flex-wrap gap-4 mt-4 mb-4">
+            <div className="shadow-sm border h-[400px] flex items-center">
+              <div className="flex justify-center items-center flex-wrap gap-4 mt-4 mb-4">
                 <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
                     <li className="text-orange-700 text-3xl font-bold">400</li>
@@ -378,7 +378,7 @@ const Career = () => {
           </div>
           <div className="w-1/2">
             <h3 className="text-lg">Activity</h3>
-            <div className="shadow-sm border rounded-md h-[300px]">
+            <div className="shadow-sm border rounded-md h-[400px]">
               <div className="w-full p-4 flex">
                 <div className="w-40 h-8 bg-pink-500">
                 </div>
@@ -392,19 +392,19 @@ const Career = () => {
                 </div>
               </div>
               <div className="w-full p-4 flex gap-2">
-                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100">
+                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100 p-2">
                   <li className="text-orange-900">On Boarding</li>
                   <li className="text-orange-900">Process Commited</li>
                   <li className="text-orange-700 text-3xl">10</li>
                 </ul>
 
-                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100">
+                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100 p-2">
                   <li className="text-orange-900">Assesments</li>
                   <li className="text-orange-900">Taken</li>
                   <li className="text-orange-700 text-3xl">80</li>
                 </ul>
 
-                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100">
+                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100 p-2">
                   <li className="text-orange-900">Technical</li>
                   <li className="text-orange-900">Assesments</li>
                   <li className="text-orange-700 text-3xl">60</li>
@@ -412,13 +412,13 @@ const Career = () => {
 
               </div>
               <div className="w-full p-4 flex gap-2">
-                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100">
+                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100 p-2">
                   <li className="text-orange-900">Inner Personal</li>
                   <li className="text-orange-900">Assesment</li>
                   <li className="text-orange-700 text-3xl">20</li>
                 </ul>
 
-                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100">
+                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100 p-2">
                   <li className="text-orange-900">Login</li>
                   <li className="text-orange-900">Activitiy</li>
                   <li className="text-orange-700 text-3xl">350</li>
