@@ -49,7 +49,7 @@ const Notifications = (props) => {
             <div className="text-white rounded-full p-2">
                 <IoMdNotificationsOutline size={24} />
             </div>
-            <div className="w-[370px] absolute -right-20 top-16 bg-white" ref={popperRef} {...attributes.popper}>
+            <div className="w-[300px] bg-white absolute -right-16 top-16" ref={popperRef} {...attributes.popper}>
                 <DropdownContainer className="shadow-sm flex flex-col" style={styles.offset} visible={visible}>
                     <div className="w-full flex space-x-2 items-center justify-between py-6 p-2 border-b ">
                         <div className="flex space-x-2">
