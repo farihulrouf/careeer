@@ -8742,6 +8742,11 @@ react-style-classes@^2.0.2:
   resolved "https://registry.yarnpkg.com/react-style-classes/-/react-style-classes-2.0.3.tgz#4af25b75048fd8b1b10a41c2d50b5d3d857c260e"
   integrity sha512-GVkst4dq8n5bckKDcucTQvIuS5gzGX0BGE3OqaWZsN6eeesrvmyqLW+qyTSCYizWw8xpQ5+18Yxeqnm8iID13A==
 
+react-tailwindcss-datepicker@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/react-tailwindcss-datepicker/-/react-tailwindcss-datepicker-1.4.2.tgz#c721beb7c912af231b4ac69d4cc5bce741f3241f"
+  integrity sha512-w5KZkmTebV1IpU89xy7yBKcFnAGpcyJ4BGPuLPvthXTJk85NgRZ+3Q1PHxYFlWHR2qmLMuq6Pv9F8MYPL3QxvA==
+
 react-tooltip@^4.2.7:
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-4.5.1.tgz#77eccccdf16adec804132e558ec20ca5783b866a"

@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component, useEffect, useState } from "react";
 import ProgressBar from "../../components/chart/ProgressBar";
 import { AiOutlineFilter, AiOutlineFilePdf, AiFillGold, AiOutlineTrophy, AiOutlineUsergroupDelete } from "react-icons/ai";
 import { BiRun } from "react-icons/bi"
@@ -6,7 +6,7 @@ import { Chart } from "react-google-charts";
 import Dropdown from 'react-multilevel-dropdown';
 import DataTable from 'react-data-table-component';
 import NavBar from "../../components/NavBar";
-
+import Datepicker from "react-tailwindcss-datepicker";
 import NavSub from "../../components/NavSub";
 const customStyles = {
   rows: {
@@ -31,10 +31,10 @@ const customStyles = {
       fontSize: '14px',
       display: 'flex',
       justifyContent: 'center',
-      
+
 
     },
-    
+
   },
 };
 
@@ -138,14 +138,24 @@ const datatable = [
 
 
 const Career = () => {
+  const [value, setValue] = useState({
+    startDate: new Date(),
+    endDate: new Date().setMonth(11)
+  });
+
+  const handleValueChange = (newValue) => {
+    console.log("newValue:", newValue);
+    setValue(newValue);
+  }
+
   const filter = () => {
     console.log("filter")
   }
   return (
     <>
       <div className="container mx-auto">
-         <NavBar />
-         <NavSub />
+        <NavBar />
+        <NavSub />
       </div>
       <div className="container mx-auto p-4 min-h-full bg-gray-50">
         <div className="bg-gray-50">
@@ -199,11 +209,17 @@ const Career = () => {
               </ul>
             </div>
           </div>
-          <div className="w-full flex justify-end">
+          <div className="w-full flex justify-between z-20 pb-2">
+            <div className="w-72 shadow-lg">
+                <Datepicker
+                    value={value}
+                    onChange={handleValueChange}
+                />
+            </div>
             <div className="flex space-x-2 mb-1">
               <div className="bg-indigo-700 text-white drop-shadow-lg rounded-sm flex space-x-2 px-1 items-center">
                 <Dropdown
-                  className="bg-indigo-700"
+                  className="bg-indigo-700 z-20"
                   title='Filter'
 
                 >
@@ -282,7 +298,7 @@ const Career = () => {
             <h3 className="text-lg">Competency Matrix </h3>
             <div className="drop-shadow-lg rounded-md h-[450px] flex">
               <div className="w-3/5 h-full relative">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
                   <p className="text-indigo-500 text-lg font-bold text-center">800<br /><span className="text-sm">USERS</span></p>
                 </div>
                 <div className="p-2 bg-white h-full w-full">
