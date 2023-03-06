@@ -8,6 +8,9 @@ import DataTable from 'react-data-table-component';
 import NavBar from "../../components/NavBar";
 import Datepicker from "react-tailwindcss-datepicker";
 import NavSub from "../../components/NavSub";
+import moment from 'moment';
+import ApiService from "../../service/ApiService";
+
 const customStyles = {
   rows: {
     style: {
@@ -142,15 +145,47 @@ const Career = () => {
     startDate: new Date(),
     endDate: new Date().setMonth(11)
   });
+  const [dataMatrix, setdataMatrix] = useState([])
 
+ //startDate = '1677577046000'
+    //endDate='1677577046000'
+    
+  useEffect(() => {
+    ApiService.Competency('1677577046000','1677577046000').then(
+      (response) => {
+        setdataMatrix(response)
+        //setPosts(response.data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }, [])
+  
+
+  
   const handleValueChange = (newValue) => {
     console.log("newValue:", newValue);
+    console.log(new Date())
+    ChangeComptencyMatrix()
+    //console.log(moment(newValue.startDate));
     setValue(newValue);
   }
 
+  const ChangeComptencyMatrix = () => {
+    ApiService.Competency('1677577046000', '1677577046000').then (
+      (response) => {
+        setdataMatrix(response)
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
+  }
   const filter = () => {
     console.log("filter")
   }
+  console.log("data message",dataMatrix.message.basic)
   return (
     <>
       <div className="container mx-auto">
@@ -314,22 +349,22 @@ const Career = () => {
               <div className="w-2/5 flex flex-col justify-center items-center bg-white">
                 <div className="flex space-x-2">
                   <div className="text-center">
-                    <h4 className="text-4xl font-bold">10</h4>
+                    <h4 className="text-4xl font-bold">{dataMatrix.message.singleAssessment}</h4>
                     <button className="bg-red-500 text-white px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                       Taken one Assesment
                     </button>
                   </div>
                   <div className="text-center">
-                    <h4 className="text-4xl font-bold">25</h4>
+                    <h4 className="text-4xl font-bold">{dataMatrix.message.twoAssessments}</h4>
                     <button className="text-white bg-green-500 px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                       Taken two Assesment
                     </button>
                   </div>
                 </div>
                 <ul className="p-2 text-lg font-semibold mt-6">
-                  <li className="text-blue-700 w-44 justify-between flex"><span>Beginner</span> <span className="text-black">10</span></li>
-                  <li className="text-red-400 w-44 justify-between flex"><span>Intermediate</span> <span className="text-black">20</span></li>
-                  <li className="text-orange-400 w-44 justify-between flex"><span>Expert</span> <span className="text-black">05</span></li>
+                  <li className="text-blue-700 w-44 justify-between flex"><span>Beginner</span> <span className="text-black">{dataMatrix.message.basic}</span></li>
+                  <li className="text-red-400 w-44 justify-between flex"><span>Intermediate</span> <span className="text-black">{dataMatrix.message.intermediate}</span></li>
+                  <li className="text-orange-400 w-44 justify-between flex"><span>Expert</span> <span className="text-black">{dataMatrix.message.expert}</span></li>
                 </ul>
               </div>
             </div>

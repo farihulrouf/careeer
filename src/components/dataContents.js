@@ -21,16 +21,43 @@ const notifications = [
         dateTime: "7 hours ago",
         item: "Sofa Deluxe",
     },
-    {  
+    {
         id: 4,
         title: "Your “Chair” Order #F19395035 has been Delivered.",
         dateTime: "2 days ago",
         item: "Sofa Deluxe",
     },
-    
-]  
+
+]
+
+const Assesment = [{
+    id: 2,
+    startDate: 1677577046000,
+    endDate: 1677577046000,
+    totalAssesmentsTaken: 2,
+    singleAssessment: 2,
+    twoAssessments: 0,
+    allAssessments: 0,
+    basic: 0,
+    intermediate: 0,
+    expert: 0
+},
+{
+    id: 1,
+    startDate: 1677577046000,
+    endDate: 1677577046000,
+    totalAssesmentsTaken: 2,
+    singleAssessment: 2,
+    twoAssessments: 0,
+    allAssessments: 0,
+    basic: 0,
+    intermediate: 0,
+    expert: 0
+}
+
+]
 
 export {
- 
+    Assesment,
     notifications,
 };
