@@ -146,7 +146,7 @@ const Career = () => {
     endDate: new Date().setMonth(11)
   });
   const [dataMatrix, setdataMatrix] = useState([])
-
+  const [dataSkillGap, setdataSkillGap] = useState([])
  //startDate = '1677577046000'
     //endDate='1677577046000'
     
@@ -160,6 +160,8 @@ const Career = () => {
         console.log(error);
       }
     );
+    
+
   }, [])
   
 
@@ -185,7 +187,7 @@ const Career = () => {
   const filter = () => {
     console.log("filter")
   }
-  console.log("data message",dataMatrix.message.basic)
+  //console.log("data message",dataMatrix.message.basic)
   return (
     <>
       <div className="container mx-auto">
@@ -349,22 +351,22 @@ const Career = () => {
               <div className="w-2/5 flex flex-col justify-center items-center bg-white">
                 <div className="flex space-x-2">
                   <div className="text-center">
-                    <h4 className="text-4xl font-bold">{dataMatrix.message.singleAssessment}</h4>
+                    <h4 className="text-4xl font-bold">2</h4>
                     <button className="bg-red-500 text-white px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                       Taken one Assesment
                     </button>
                   </div>
                   <div className="text-center">
-                    <h4 className="text-4xl font-bold">{dataMatrix.message.twoAssessments}</h4>
+                    <h4 className="text-4xl font-bold">3</h4>
                     <button className="text-white bg-green-500 px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                       Taken two Assesment
                     </button>
                   </div>
                 </div>
                 <ul className="p-2 text-lg font-semibold mt-6">
-                  <li className="text-blue-700 w-44 justify-between flex"><span>Beginner</span> <span className="text-black">{dataMatrix.message.basic}</span></li>
-                  <li className="text-red-400 w-44 justify-between flex"><span>Intermediate</span> <span className="text-black">{dataMatrix.message.intermediate}</span></li>
-                  <li className="text-orange-400 w-44 justify-between flex"><span>Expert</span> <span className="text-black">{dataMatrix.message.expert}</span></li>
+                  <li className="text-blue-700 w-44 justify-between flex"><span>Beginner</span> <span className="text-black">2</span></li>
+                  <li className="text-red-400 w-44 justify-between flex"><span>Intermediate</span> <span className="text-black">3</span></li>
+                  <li className="text-orange-400 w-44 justify-between flex"><span>Expert</span> <span className="text-black">4</span></li>
                 </ul>
               </div>
             </div>
