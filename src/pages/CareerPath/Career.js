@@ -41,13 +41,21 @@ const customStyles = {
   },
 };
 
-export const data = [
+
+
+const Career = () => {
+  const [value, setValue] = useState({
+    startDate: new Date(),
+    endDate: new Date().setMonth(11)
+  });
+
+const data = [
   ["Skill Gap Covered", "Skill Gap"],
   ["Skill Gap Covered", 60],
   ["Skill Gap", 40],
 ];
 
-export const options = {
+const options = {
   legend: "none",
   pieSliceText: "label",
   pieStartAngle: 100,
@@ -55,14 +63,14 @@ export const options = {
 
 };
 
-export const datatwo = [
+const datatwo = [
   ["C1", "C2"],
   ["C1", 11],
   ["C2", 2],
   ["C3", 2],
 ];
 
-export const optionstwo = {
+ const optionstwo = {
   pieHole: 0.7,
   legend: "none",
   pieSliceText: "label",
@@ -70,8 +78,7 @@ export const optionstwo = {
   is3D: false,
 
 };
-
-export const dataBar = [
+ const dataBar = [
   [
     "Month",
     "",
@@ -82,7 +89,7 @@ export const dataBar = [
   ["Q4", 90,],
 ];
 
-export const optionsBar = {
+const optionsBar = {
 
   vAxis: { title: "Y-Axis" },
   hAxis: { title: "X-Axis" },
@@ -138,14 +145,16 @@ const datatable = [
     position: '20 PTS'
   },
 ]
-
-
-const Career = () => {
-  const [value, setValue] = useState({
-    startDate: new Date(),
-    endDate: new Date().setMonth(11)
-  });
-  const [dataMatrix, setdataMatrix] = useState()
+  const [dataMatrix, setdataMatrix] = useState({
+    message: {
+      allAssessments: 0,
+      basic: 0,
+      intermediate: 0,
+      singleAssessment: 0,
+      totalAssesmentsTaken: 0,
+      twoAssessments: 0,
+    }
+  })
   const [dataSkillGap, setdataSkillGap] = useState([])
  //startDate = '1677577046000'
     //endDate='1677577046000'
@@ -154,16 +163,15 @@ const Career = () => {
     ApiService.Competency('1677577046000','1677577046000').then(
       (response) => {
         setdataMatrix(response)
-        //setPosts(response.data);
+        
+        //console.log('cob test,', response)
       },
       (error) => {
-        console.log(error);
+       console.log(error)
       }
-    ); 
-
+    )
   }, [])
   
-
   
   const handleValueChange = (newValue) => {
     console.log("newValue:", newValue);
@@ -174,19 +182,21 @@ const Career = () => {
   }
 
   const ChangeComptencyMatrix = () => {
-    ApiService.Competency('1677577046000', '1677577046000').then (
+    ApiService.Competency('1677577046000','1677577046000').then(
       (response) => {
-        setdataMatrix(response)
+        //setdataMatrix(response.message)
+        //console.log("bacadata", response)
+        //setPosts(response.data);
       },
       (error) => {
-        console.log(error)
+        console.log(error);
       }
-    )
+    ); 
   }
   const filter = () => {
     console.log("filter")
   }
- // console.log("data message",dataMatrix.message.basic)
+ // console.log("data message",dataMatrix)
   return (
     <>
       <div className="container mx-auto">
@@ -350,22 +360,22 @@ const Career = () => {
               <div className="w-2/5 flex flex-col justify-center items-center bg-white">
                 <div className="flex space-x-2">
                   <div className="text-center">
-                    <h4 className="text-4xl font-bold">2</h4>
+                    <h4 className="text-4xl font-bold">{dataMatrix.message.singleAssessment}</h4>
                     <button className="bg-red-500 text-white px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                       Taken one Assesment
                     </button>
                   </div>
                   <div className="text-center">
-                    <h4 className="text-4xl font-bold">3</h4>
+                    <h4 className="text-4xl font-bold">{dataMatrix.message.twoAssessments}</h4>
                     <button className="text-white bg-green-500 px-2 py-2 rounded-xl w-28 hover:bg-indigo-700">
                       Taken two Assesment
                     </button>
                   </div>
                 </div>
                 <ul className="p-2 text-lg font-semibold mt-6">
-                  <li className="text-blue-700 w-44 justify-between flex"><span>Beginner</span> <span className="text-black">2</span></li>
-                  <li className="text-red-400 w-44 justify-between flex"><span>Intermediate</span> <span className="text-black">3</span></li>
-                  <li className="text-orange-400 w-44 justify-between flex"><span>Expert</span> <span className="text-black">4</span></li>
+                  <li className="text-blue-700 w-44 justify-between flex"><span>Beginner</span> <span className="text-black">{dataMatrix.message.basic}</span></li>
+                  <li className="text-red-400 w-44 justify-between flex"><span>Intermediate</span> <span className="text-black">{dataMatrix.message.intermediate}</span></li>
+                  <li className="text-orange-400 w-44 justify-between flex"><span>Expert</span> <span className="text-black">{dataMatrix.message.expert}</span></li>
                 </ul>
               </div>
             </div>

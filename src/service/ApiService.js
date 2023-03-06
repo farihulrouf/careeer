@@ -1,6 +1,5 @@
 import axios from "axios";
 import AuthHeader from "./AuthHeader";
-import { Assesment } from "../components/dataContents";
 const API_URL = "https://apidev.elcarreira.com/";
 //const API = 'https://be.dresstyleone.com/'
 const getAllPublicPosts = () => {
@@ -12,15 +11,16 @@ const getAllPrivatePosts = () => {
   { headers: AuthHeader() });
 };
 
-const Competency = (startDate, endDate) => {
+const Competency = async (startDate, endDate) => {
     //startDate = '1677577046000'
     //endDate='1677577046000'
-    return axios
+    return await axios
       .post(API_URL + "analytics/competencyAnalysis/orgId/5?", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
         startDate,
         endDate,
       })
       .then((response) => {
+        console.log("baca sekai", response)
         //console.log(response.data)
         //if (response.data.accessToken) {
        //   localStorage.setItem("user", JSON.stringify(response.data));
@@ -29,6 +29,8 @@ const Competency = (startDate, endDate) => {
         return response.data;
       });
   };
+  
+
   
   const SkillGap = (startDate, endDate) => {
     //startDate = '1677577046000'
@@ -47,6 +49,8 @@ const Competency = (startDate, endDate) => {
         return response.data;
       });
   };
+
+  
   
 
 const ApiService = {
