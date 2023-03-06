@@ -170,6 +170,16 @@ const datatable = [
        console.log(error)
       }
     )
+    ApiService.SkillGap('1677577046000','1677577046000').then(
+      (response) => {
+        setdataSkillGap(response)
+        
+        //console.log('cob test,', response)
+      },
+      (error) => {
+       console.log(error)
+      }
+    )
   }, [])
   
   
@@ -177,16 +187,13 @@ const datatable = [
     console.log("newValue:", newValue);
     console.log(new Date())
     ChangeComptencyMatrix()
-    //console.log(moment(newValue.startDate));
     setValue(newValue);
   }
 
   const ChangeComptencyMatrix = () => {
     ApiService.Competency('1677577046000','1677577046000').then(
       (response) => {
-        //setdataMatrix(response.message)
-        //console.log("bacadata", response)
-        //setPosts(response.data);
+    
       },
       (error) => {
         console.log(error);
@@ -196,6 +203,7 @@ const datatable = [
   const filter = () => {
     console.log("filter")
   }
+  console.log(dataSkillGap)
  // console.log("data message",dataMatrix)
   return (
     <>

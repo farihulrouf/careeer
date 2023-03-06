@@ -11,45 +11,35 @@ const getAllPrivatePosts = () => {
   { headers: AuthHeader() });
 };
 
-const Competency = async (startDate, endDate) => {
+const Competency = async (startTime, endTime) => {
     //startDate = '1677577046000'
     //endDate='1677577046000'
     return await axios
-      .post(API_URL + "analytics/competencyAnalysis/orgId/5?", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
-        startDate,
-        endDate,
+      .post(API_URL + "analytics/competencyAnalysis/orgId/5?startTime=1677577046000&endTime=1677577046000", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
+        startTime,
+        endTime,
       })
       .then((response) => {
-        console.log("baca sekai", response)
-        //console.log(response.data)
-        //if (response.data.accessToken) {
-       //   localStorage.setItem("user", JSON.stringify(response.data));
-       // }
-  
+    
         return response.data;
       });
   };
   
-
-  
-  const SkillGap = (startDate, endDate) => {
+  const SkillGap = async (startTime, endTime) => {
     //startDate = '1677577046000'
     //endDate='1677577046000'
-    return axios
+    return await axios
       .post(API_URL + "analytics/skillGapAnalysis/orgId/5?", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
-        startDate,
-        endDate,
+        startTime,
+        endTime,
       })
       .then((response) => {
-        //console.log(response.data)
-        //if (response.data.accessToken) {
-       //   localStorage.setItem("user", JSON.stringify(response.data));
-       // }
-  
+        //console.log(response)
         return response.data;
       });
   };
-
+  
+ 
   
   
 
