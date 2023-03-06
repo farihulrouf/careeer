@@ -145,11 +145,11 @@ const Career = () => {
     startDate: new Date(),
     endDate: new Date().setMonth(11)
   });
-  const [dataMatrix, setdataMatrix] = useState([])
+  const [dataMatrix, setdataMatrix] = useState()
   const [dataSkillGap, setdataSkillGap] = useState([])
  //startDate = '1677577046000'
     //endDate='1677577046000'
-    
+  
   useEffect(() => {
     ApiService.Competency('1677577046000','1677577046000').then(
       (response) => {
@@ -159,8 +159,7 @@ const Career = () => {
       (error) => {
         console.log(error);
       }
-    );
-    
+    ); 
 
   }, [])
   
@@ -187,7 +186,7 @@ const Career = () => {
   const filter = () => {
     console.log("filter")
   }
-  //console.log("data message",dataMatrix.message.basic)
+ // console.log("data message",dataMatrix.message.basic)
   return (
     <>
       <div className="container mx-auto">
