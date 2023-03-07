@@ -101,7 +101,7 @@ function App() {
               <Route  path="/carerpath">
                 <Career />
               </Route>
-              <Route path="/registeorganization">
+              <Route path="/createaudit">
                 <RegisterOrganisation />
               </Route>
               <Route path="/notauthorised">
