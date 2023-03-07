@@ -49,102 +49,93 @@ const Career = () => {
     endDate: new Date().setMonth(11)
   });
 
-const data = [
-  ["Skill Gap Covered", "Skill Gap"],
-  ["Skill Gap Covered", 60],
-  ["Skill Gap", 40],
-];
+  const data = [
+    ["Skill Gap Covered", "Skill Gap"],
+    ["Skill Gap Covered", 60],
+    ["Skill Gap", 40],
+  ];
 
-const options = {
-  legend: "none",
-  pieSliceText: "label",
-  pieStartAngle: 100,
-  sliceVisibilityThreshold: 0.2, // 20%
+  const options = {
+    legend: "none",
+    pieSliceText: "label",
+    pieStartAngle: 100,
+    sliceVisibilityThreshold: 0.2, // 20%
 
-};
+  };
 
-const datatwo = [
-  ["C1", "C2"],
-  ["C1", 11],
-  ["C2", 2],
-  ["C3", 2],
-];
+  const datatwo = [
+    ["C1", "C2"],
+    ["C1", 11],
+    ["C2", 2],
+    ["C3", 2],
+  ];
 
- const optionstwo = {
-  pieHole: 0.7,
-  legend: "none",
-  pieSliceText: "label",
-  pieStartAngle: 100,
-  is3D: false,
+  const optionstwo = {
+    pieHole: 0.7,
+    legend: "none",
+    pieSliceText: "label",
+    pieStartAngle: 100,
+    is3D: false,
 
-};
- const dataBar = [
-  [
-    "Month",
-    "",
-  ],
-  ["Q1", 100,],
-  ["Q2", 50,],
-  ["Q3", 50,],
-  ["Q4", 90,],
-];
-
-const optionsBar = {
-
-  vAxis: { title: "Y-Axis" },
-  hAxis: { title: "X-Axis" },
-  seriesType: "bars",
-  series: { 3: { type: "line" } },
-};
+  };
 
 
-const columnstable = [
-  {
-    name: 'Department Name',
-    selector: row => row.title,
-  },
-  {
-    name: 'Leader Board PTS',
-    selector: row => row.leader,
-  },
-  {
-    name: 'Position Moved',
-    selector: row => row.position,
-  },
-];
+  const optionsBar = {
 
-const datatable = [
-  {
-    id: 1,
-    title: 'TAL-CS',
-    leader: '486',
-    position: '20 PTS'
-  },
-  {
-    id: 2,
-    title: 'TAL-CS',
-    leader: '486',
-    position: '20 PTS'
-  },
-  {
-    id: 3,
-    title: 'TAL-CS',
-    leader: '486',
-    position: '20 PTS'
-  },
-  {
-    id: 4,
-    title: 'TAL-CS',
-    leader: '486',
-    position: '20 PTS'
-  },
-  {
-    id: 5,
-    title: 'TAL-TX',
-    leader: '486',
-    position: '20 PTS'
-  },
-]
+    vAxis: { title: "Y-Axis" },
+    hAxis: { title: "X-Axis" },
+    seriesType: "bars",
+    series: { 3: { type: "line" } },
+  };
+
+
+  const columnstable = [
+    {
+      name: 'Department Name',
+      selector: row => row.title,
+    },
+    {
+      name: 'Leader Board PTS',
+      selector: row => row.leader,
+    },
+    {
+      name: 'Position Moved',
+      selector: row => row.position,
+    },
+  ];
+
+  const datatable = [
+    {
+      id: 1,
+      title: 'TAL-CS',
+      leader: '486',
+      position: '20 PTS'
+    },
+    {
+      id: 2,
+      title: 'TAL-CS',
+      leader: '486',
+      position: '20 PTS'
+    },
+    {
+      id: 3,
+      title: 'TAL-CS',
+      leader: '486',
+      position: '20 PTS'
+    },
+    {
+      id: 4,
+      title: 'TAL-CS',
+      leader: '486',
+      position: '20 PTS'
+    },
+    {
+      id: 5,
+      title: 'TAL-TX',
+      leader: '486',
+      position: '20 PTS'
+    },
+  ]
   const [dataMatrix, setdataMatrix] = useState({
     message: {
       allAssessments: 0,
@@ -156,33 +147,55 @@ const datatable = [
     }
   })
   const [dataSkillGap, setdataSkillGap] = useState([])
- //startDate = '1677577046000'
-    //endDate='1677577046000'
-  
+  const [dataAttriTion, setDataAttrition] = useState([])
+  const [dataActivity, setDataActivity] = useState([])
+  //startDate = '1677577046000'
+  //endDate='1677577046000'
+
   useEffect(() => {
-    ApiService.Competency('1677577046000','1677577046000').then(
+    ApiService.Competency('1677577046000', '1677577046000').then(
       (response) => {
         setdataMatrix(response)
-        
+
         //console.log('cob test,', response)
       },
       (error) => {
-       console.log(error)
+        console.log(error)
       }
     )
-    ApiService.SkillGap('1677577046000','1677577046000').then(
+    ApiService.SkillGap('1677577046000', '1677577046000').then(
       (response) => {
         setdataSkillGap(response)
-        
+
         //console.log('cob test,', response)
       },
       (error) => {
-       console.log(error)
+        console.log(error)
+      }
+    )
+    ApiService.AttritionApi('1677577046000', '1677577046000').then(
+      (response) => {
+        // setdataSkillGap(response)
+        setDataAttrition(response)
+        //console.log('cob test,', response)
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
+    ApiService.ActivityApi('1677577046000', '1677577046000').then(
+      (response) => {
+        // setdataSkillGap(response)
+        setDataActivity(response)
+        //console.log('cob test,', response)
+      },
+      (error) => {
+        console.log(error)
       }
     )
   }, [])
-  
-  
+
+
   const handleValueChange = (newValue) => {
     console.log("newValue:", newValue);
     console.log(new Date())
@@ -191,20 +204,31 @@ const datatable = [
   }
 
   const ChangeComptencyMatrix = () => {
-    ApiService.Competency('1677577046000','1677577046000').then(
+    ApiService.Competency('1677577046000', '1677577046000').then(
       (response) => {
-    
+        //console.log("compentency", response)
       },
       (error) => {
         console.log(error);
       }
-    ); 
+    );
   }
   const filter = () => {
     console.log("filter")
   }
-  console.log(dataSkillGap)
- // console.log("data message",dataMatrix)
+  console.log("comptency matrix", dataAttriTion.Q1)
+  const dataBar = [
+    [
+      "Month",
+      "",
+    ],
+    ["Q1", dataAttriTion.Q1],
+    ["Q2", dataAttriTion.Q2],
+    ["Q3", dataAttriTion.Q3,],
+    ["Q4", dataAttriTion.Q4,],
+  ];
+  console.log(dataActivity)
+  // console.log("data message",dataMatrix)
   return (
     <>
       <div className="container mx-auto">
@@ -220,33 +244,33 @@ const datatable = [
             <div>
               <div className="flex space-x-6">
                 <div className="text-center font-semibold flex items-center">
-                  <ul className="w-64 relative drop-shadow-lg rounded-md bg-gradient-to-r from-yellow-400 bg-pink-300 p-2 hover:text-white hover:bg-indigo-500">
-                    <p className="absolute text-white text-xl top-2/3 transform -translate-y-1/2">26</p>
+                  <ul className="w-64 relative drop-shadow-lg rounded-md bg-white p-2">
+                    <p className="absolute text-gray-600  text-xl top-2/3 transform -translate-y-1/2">26</p>
                     <li className="text-black text-2xl">Total Employees</li>
                     <li className="text-2xl text-black">800</li>
-                    <div className="absolute  text-white text-md bottom-1 right-1">
+                    <div className="absolute  text-indigo-800 text-md bottom-1 right-1">
                       <AiOutlineUsergroupDelete size={24} />
                     </div>
                   </ul>
                 </div>
 
                 <div className="text-center font-semibold flex items-center">
-                  <ul className="w-64 relative drop-shadow-lg rounded-md bg-gradient-to-r from-pink-300 bg-pink-500 text-white p-2 hover:text-white hover:bg-indigo-500">
-                    <p className="absolute text-white text-xl top-2/3 transform -translate-y-1/2">4</p>
+                  <ul className="w-64 relative bg-white drop-shadow-lg rounded-md p-2">
+                    <p className="absolute text-gray-600 text-xl top-2/3 transform -translate-y-1/2">4</p>
                     <li className="text-black text-2xl">Exit Employees</li>
                     <li className="text-2xl text-black">200</li>
-                    <div className="absolute  text-white text-md bottom-1 right-1">
+                    <div className="absolute  text-indigo-800 text-md bottom-1 right-1">
                       <BiRun size={24} />
                     </div>
                   </ul>
                 </div>
                 <div className="text-center font-semibold flex items-center">
-                  <ul className="w-64 relative drop-shadow-lg rounded-md bg-gradient-to-r from-green-200 bg-green-500 text-white p-2 hover:text-white hover:bg-indigo-500">
-                    <p className="absolute text-white text-xl top-2/3 transform -translate-y-1/2">5</p>
+                  <ul className="w-64 relative drop-shadow-lg rounded-md bg-white p-2">
+                    <p className="absolute text-gray-600 text-xl top-2/3 transform -translate-y-1/2">5</p>
                     <li className="text-black text-2xl">Attrition</li>
                     <li className="text-2xl text-black">10%</li>
 
-                    <div className="absolute  text-white text-md bottom-1 right-1">
+                    <div className="absolute text-indigo-800 text-md bottom-1 right-1">
                       <AiFillGold size={24} />
                     </div>
                   </ul>
@@ -255,7 +279,7 @@ const datatable = [
             </div>
 
             <div className="text-left font-semibold flex items-center w-96">
-              <ul className="bg-red-400 w-full drop-shadow-lg text-center rounded-md p-2 hover:text-white hover:bg-indigo-500">
+              <ul className="bg-red-400 w-full rounded-md drop-shadow-lg text-center p-2 bg-white">
                 <li className="text-2xl text-black">Top Dept On Leader board</li>
                 <li className="relative text-2xl">
                   Cient Services <span className="ml-2 text-black font-bold text-sxl">486</span>
@@ -264,11 +288,13 @@ const datatable = [
             </div>
           </div>
           <div className="w-full flex justify-between z-20 pb-2">
-            <div className="w-72 shadow-lg">
+            <div className="w-72">
+              {/*
                 <Datepicker
                     value={value}
                     onChange={handleValueChange}
                 />
+              */}
             </div>
             <div className="flex space-x-2 mb-1">
               <div className="bg-indigo-700 text-white drop-shadow-lg rounded-sm flex space-x-2 px-1 items-center">
@@ -484,40 +510,16 @@ const datatable = [
                 <div className="w-40 h-8 bg-red-500">
                 </div>
               </div>
-              <div className="w-full p-4 flex gap-2">
-                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100 p-2">
-                  <li className="text-orange-900">On Boarding</li>
-                  <li className="text-orange-900">Process Commited</li>
-                  <li className="text-orange-700 text-3xl">10</li>
-                </ul>
-
-                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100 p-2">
-                  <li className="text-orange-900">Assesments</li>
-                  <li className="text-orange-900">Taken</li>
-                  <li className="text-orange-700 text-3xl">80</li>
-                </ul>
-
-                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100 p-2">
-                  <li className="text-orange-900">Technical</li>
-                  <li className="text-orange-900">Assesments</li>
-                  <li className="text-orange-700 text-3xl">60</li>
-                </ul>
-
-              </div>
-              <div className="w-full p-4 flex gap-2">
-                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100 p-2">
-                  <li className="text-orange-900">Inner Personal</li>
-                  <li className="text-orange-900">Assesment</li>
-                  <li className="text-orange-700 text-3xl">20</li>
-                </ul>
-
-                <ul className="text-center font-semibold w-48 bg-white drop-shadow-md hover:bg-gray-100 p-2">
-                  <li className="text-orange-900">Login</li>
-                  <li className="text-orange-900">Activitiy</li>
-                  <li className="text-orange-700 text-3xl">350</li>
-                </ul>
-
-
+              <div className="w-full p-4 flex flex-wrap gap-2">
+                {dataActivity.map((data, index) => {
+                  return (
+                    <ul className="text-center font-semibold w-44 bg-white drop-shadow-md hover:bg-gray-100 p-2">
+                      <li className="text-orange-900 mb-2 mt-2 uppercase">{data.activityName}</li>
+                      
+                      <li className="text-orange-700 mt-2 mb-2 text-3xl">{data.activityCount}</li>
+                    </ul>
+                  )
+                })}
 
               </div>
             </div>

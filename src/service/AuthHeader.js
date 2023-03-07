@@ -7,6 +7,5 @@ const AuthHeader = () => {
     } else {
       return {};
     }
-    return { "Authorization": "f0b0cee3eb9f87014ff6" }
   }
   export default AuthHeader

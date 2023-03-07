@@ -1,5 +1,5 @@
 const ProgressBar = ({progressPercentage}) => {
-    console.log(progressPercentage)
+   // console.log(progressPercentage)
     return (
         <div className='h-5 bg-gray-300 rounded-full font-play'>
             <div style={{ width: `${progressPercentage}%`}}

@@ -15,7 +15,7 @@ const Competency = async (startTime, endTime) => {
     //startDate = '1677577046000'
     //endDate='1677577046000'
     return await axios
-      .post(API_URL + "analytics/competencyAnalysis/orgId/5?startTime=1677577046000&endTime=1677577046000", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
+      .post(API_URL + "analytics/competencyanalysis/orgId/5?startTime=1677577046000&endTime=1677577046000", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
         startTime,
         endTime,
       })
@@ -29,7 +29,7 @@ const Competency = async (startTime, endTime) => {
     //startDate = '1677577046000'
     //endDate='1677577046000'
     return await axios
-      .post(API_URL + "analytics/skillGapAnalysis/orgId/5?", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
+      .post(API_URL + "analytics/skillgapanalysis/orgId/5?startTime=1677577046000&endTime=1677577046000", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
         startTime,
         endTime,
       })
@@ -38,13 +38,39 @@ const Competency = async (startTime, endTime) => {
         return response.data;
       });
   };
-  
+
+  const AttritionApi = async (startTime, endTime) => {
+    //startDate = '1677577046000'
+    //endDate='1677577046000'
+    return await axios
+      .post(API_URL + "analytics/attrition/orgId/5?startTime=1677577046000&endTime=1677577046000", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
+        startTime,
+        endTime,
+      })
+      .then((response) => {
+        //console.log(response)
+        return response.data;
+      });
+  };
+  const ActivityApi = async (startTime, endTime) => {
+    return await axios
+    .post(API_URL + "analytics/top5Activities/orgId/5?startTime=1677577046000&endTime=1677577046000", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
+      startTime,
+      endTime,
+    })
+    .then((response) => {
+      //console.log(response)
+      return response.data;
+    });
+  }
  
   
   
 
 const ApiService = {
   Competency,
+  AttritionApi,
+  ActivityApi,
   SkillGap,
   getAllPublicPosts,
   getAllPrivatePosts,
