@@ -146,7 +146,28 @@ const Career = () => {
       twoAssessments: 0,
     }
   })
-  const [dataSkillGap, setdataSkillGap] = useState([])
+  const [dataSkillGap, setdataSkillGap] = useState({
+    SkillGapByType: [
+      {
+        skillname: "Technical",
+        skillGap: 0
+    },
+    {
+        skillname: "Functional",
+        skillGap: 0
+    },
+    {
+        skillname: "Interpersonal",
+        skillGap: 0
+    },
+    {
+        skillname: "Stake holder",
+        skillGap: 0
+    }
+
+    ]
+  
+})
   const [dataAttriTion, setDataAttrition] = useState([])
   const [dataActivity, setDataActivity] = useState([])
   //startDate = '1677577046000'
@@ -230,7 +251,7 @@ const Career = () => {
   console.log("data Attritions", dataAttriTion)
   console.log('activity data',dataActivity)
   console.log("data Compenteny Matrix",dataMatrix)
-  console.log("data skill gaps", dataSkillGap.SkillGapByType[0].skillGap)
+  console.log("data skill gaps", dataSkillGap)
   return (
     <>
       <div className="container mx-auto">
