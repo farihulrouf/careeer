@@ -98,7 +98,7 @@ function App() {
               <Route exact={true} path="/login">
                 <LoginPage />
               </Route>
-              <Route  path="/carerpath">
+              <Route  path="/dashboard">
                 <Career />
               </Route>
               <Route path="/createaudit">
