@@ -63,12 +63,26 @@ const Competency = async (startTime, endTime) => {
       return response.data;
     });
   }
+
+  
+  const CareerPathApi = async (startTime, endTime) => {
+    return await axios
+    .post(API_URL + "analytics/careerPath/orgId/7?", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
+      startTime,
+      endTime,
+    })
+    .then((response) => {
+      //console.log(response)
+      return response.data;
+    });
+  }
  
   
   
 
 const ApiService = {
   Competency,
+  CareerPathApi,
   AttritionApi,
   ActivityApi,
   SkillGap,

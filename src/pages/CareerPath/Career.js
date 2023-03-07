@@ -136,6 +136,7 @@ const Career = () => {
       position: '20 PTS'
     },
   ]
+  const [dataCareer, setDataCareer] = useState({})
   const [dataMatrix, setdataMatrix] = useState({
     message: {
       allAssessments: 0,
@@ -214,6 +215,16 @@ const Career = () => {
         console.log(error)
       }
     )
+    ApiService.CareerPathApi('1677577046000', '1677577046000').then(
+      (response) => {
+        // setdataSkillGap(response)
+        setDataCareer(response)
+        //console.log('cob test,', response)
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
   }, [])
 
 
@@ -252,6 +263,7 @@ const Career = () => {
   console.log('activity data',dataActivity)
   console.log("data Compenteny Matrix",dataMatrix)
   console.log("data skill gaps", dataSkillGap)
+  console.log("data careerpath", dataCareer)
   return (
     <>
       <div className="container mx-auto">
@@ -472,42 +484,42 @@ const Career = () => {
               <div className="flex justify-center items-center flex-wrap gap-4 mt-4 mb-4">
                 <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-3xl font-bold">400</li>
+                    <li className="text-orange-700 text-3xl font-bold">{dataCareer.approvedCareerPaths}</li>
+                    <li className="text-indigo-900">Approved</li>
                     <li className="text-indigo-900">Career Path</li>
-                    <li className="text-indigo-900">Assigned To Employees</li>
                   </ul>
                 </div>
                 <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-3xl font-bold">400</li>
-                    <li className="text-indigo-900">Career PATH</li>
-                    <li className="text-indigo-900">Registered</li>
+                    <li className="text-orange-700 text-3xl font-bold">{dataCareer.totalCareerPathsRequested}</li>
+                    <li className="text-indigo-900">Total Career</li>
+                    <li className="text-indigo-900">Path Requested</li>
                   </ul>
                 </div>
                 <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-3xl font-bold">100</li>
+                    <li className="text-orange-700 text-3xl font-bold">{dataCareer.upwardCareerPathsProposed}</li>
                     <li className="text-indigo-900">Upward Path</li>
                     <li className="text-indigo-900">Propposed</li>
                   </ul>
                 </div>
                 <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-3xl font-bold">50</li>
+                    <li className="text-orange-700 text-3xl font-bold">{dataCareer.alternateCareerPathsProposed}</li>
                     <li className="text-indigo-900">Aalternate Path</li>
                     <li className="text-indigo-900">Propposed</li>
                   </ul>
                 </div>
                 <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-3xl font-bold">40</li>
-                    <li className="text-indigo-900">Denied Path</li>
+                    <li className="text-orange-700 text-3xl font-bold">{dataCareer.rejectedCareerPaths}</li>
+                    <li className="text-indigo-900">Rejected</li>
                     <li className="text-indigo-900">Career Path</li>
                   </ul>
                 </div>
                 <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
-                    <li className="text-orange-700 text-3xl font-bold">10</li>
+                    <li className="text-orange-700 text-3xl font-bold">0</li>
                     <li className="text-indigo-900">Propposed PATH</li>
                     <li className="text-indigo-900">Moved To Role</li>
                   </ul>
