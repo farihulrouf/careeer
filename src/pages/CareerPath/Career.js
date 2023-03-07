@@ -6,7 +6,7 @@ import { Chart } from "react-google-charts";
 import Dropdown from 'react-multilevel-dropdown';
 import DataTable from 'react-data-table-component';
 import NavBar from "../../components/NavBar";
-import Datepicker from "react-tailwindcss-datepicker";
+//import Datepicker from "react-tailwindcss-datepicker";
 import NavSub from "../../components/NavSub";
 import moment from 'moment';
 import ApiService from "../../service/ApiService";
@@ -280,7 +280,7 @@ const Career = () => {
               <ul className="bg-red-400 w-full rounded-md drop-shadow-lg text-center p-2 bg-white">
                 <li className="text-2xl text-black">Top Dept On Leader board</li>
                 <li className="relative text-2xl">
-                  Cient Services <span className="ml-2 text-black font-bold text-sxl">486</span>
+                Cient to Client <span className="ml-2 text-black font-bold text-sxl">486</span>
                 </li>
               </ul>
             </div>
