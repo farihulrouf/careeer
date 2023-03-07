@@ -230,6 +230,7 @@ const Career = () => {
   console.log("data Attritions", dataAttriTion)
   console.log('activity data',dataActivity)
   console.log("data Compenteny Matrix",dataMatrix)
+  console.log("data skill gaps", dataSkillGap.SkillGapByType[0].skillGap)
   return (
     <>
       <div className="container mx-auto">
@@ -354,20 +355,20 @@ const Career = () => {
               </div>
               <div className="w-1/2 p-2 flex justify-center flex-col bg-white">
                 <div className="p-2">
-                  <p className="text-red-500">TEECHNINCAL</p>
-                  <ProgressBar progressPercentage={50} />
+                  <p className="text-red-500">TECHNINCAL</p>
+                  <ProgressBar progressPercentage={dataSkillGap.SkillGapByType[0].skillGap} />
                 </div>
                 <div className="p-2 mt-4">
                   <p className="text-indigo-700">FUNCTIONAL</p>
-                  <ProgressBar progressPercentage={70} />
+                  <ProgressBar progressPercentage={dataSkillGap.SkillGapByType[1].skillGap} />
                 </div>
                 <div className="p-2 mt-4">
                   <p className="text-green-800">INTER PERSONAL</p>
-                  <ProgressBar progressPercentage={100} />
+                  <ProgressBar progressPercentage={dataSkillGap.SkillGapByType[2].skillGap} />
                 </div>
                 <div className="p-2 mt-4">
                   <p className="font-semibold text-orange-500">STAKE HOLDER</p>
-                  <ProgressBar progressPercentage={90} />
+                  <ProgressBar progressPercentage={dataSkillGap.SkillGapByType[3].skillGap} />
                 </div>
               </div>
             </div>

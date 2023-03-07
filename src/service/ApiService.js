@@ -29,7 +29,7 @@ const Competency = async (startTime, endTime) => {
     //startDate = '1677577046000'
     //endDate='1677577046000'
     return await axios
-      .post(API_URL + "analytics/skillgapanalysis/orgId/5?startTime=1677577046000&endTime=1677577046000", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
+      .post(API_URL + "analytics/skillGapAnalysis/orgId/7?startTime=1677577046000&endTime=1677577046000", { headers: { 'Content-Type': 'application/json', 'Authorization': 'f0b0cee3eb9f87014ff6' } },  {
         startTime,
         endTime,
       })
