@@ -216,7 +216,7 @@ const Career = () => {
   const filter = () => {
     console.log("filter")
   }
-  console.log("comptency matrix", dataAttriTion.Q1)
+
   const dataBar = [
     [
       "Month",
@@ -227,8 +227,9 @@ const Career = () => {
     ["Q3", dataAttriTion.Q3,],
     ["Q4", dataAttriTion.Q4,],
   ];
-  console.log(dataActivity)
-  // console.log("data message",dataMatrix)
+  console.log("data Attritions", dataAttriTion)
+  console.log('activity data',dataActivity)
+  console.log("data Compenteny Matrix",dataMatrix)
   return (
     <>
       <div className="container mx-auto">
@@ -245,7 +246,6 @@ const Career = () => {
               <div className="flex space-x-6">
                 <div className="text-center font-semibold flex items-center">
                   <ul className="w-64 relative drop-shadow-lg rounded-md bg-white p-2">
-                    <p className="absolute text-gray-600  text-xl top-2/3 transform -translate-y-1/2">26</p>
                     <li className="text-black text-2xl">Total Employees</li>
                     <li className="text-2xl text-black">800</li>
                     <div className="absolute  text-indigo-800 text-md bottom-1 right-1">
@@ -256,7 +256,6 @@ const Career = () => {
 
                 <div className="text-center font-semibold flex items-center">
                   <ul className="w-64 relative bg-white drop-shadow-lg rounded-md p-2">
-                    <p className="absolute text-gray-600 text-xl top-2/3 transform -translate-y-1/2">4</p>
                     <li className="text-black text-2xl">Exit Employees</li>
                     <li className="text-2xl text-black">200</li>
                     <div className="absolute  text-indigo-800 text-md bottom-1 right-1">
@@ -266,7 +265,6 @@ const Career = () => {
                 </div>
                 <div className="text-center font-semibold flex items-center">
                   <ul className="w-64 relative drop-shadow-lg rounded-md bg-white p-2">
-                    <p className="absolute text-gray-600 text-xl top-2/3 transform -translate-y-1/2">5</p>
                     <li className="text-black text-2xl">Attrition</li>
                     <li className="text-2xl text-black">10%</li>
 
