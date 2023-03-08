@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+.react-tabs__tab-list {
+  border : none
+
+}
+
+.react-tabs__tab {
+  display: inline-block;
+}
+.react-tabs__tab--selected  {
+  margin-top: 10px;
+  border-bottom: 2px solid red;
+
+}
+
+
+
