@@ -187,9 +187,9 @@ const RegisterOrganisation = () => {
                         </div>
                     </TabPanel>
                     <TabPanel>
-                        <div className='w-full flex mt-4'>
-                            <div className='w-1/2 flex justify-center'>
-                                <div className='max-w-sm bg-white h-[300px] p-2 drop-shadow-lg'>
+                        <div className='w-full flex mt-4 gap-2'>
+                            <div className='w-1/2 flex justify-center drop-shadow-lg'>
+                                <div className='w-full bg-white p-2 drop-shadow-lg'>
                                     <div className='flex justify-center items-center gap-4'>
                                         <p className='text-gray-500 text-lg'>Employees Name</p>
                                         <h4 className='text-2xl'>Audit Report</h4>
@@ -203,7 +203,7 @@ const RegisterOrganisation = () => {
                                             activeColor="#ffd700"
                                         />
                                     </div>
-                                    <div className="w-full flex flex-wrap gap-2">
+                                    <div className="w-full flex justify-center flex-wrap gap-2">
                                         <ul className="text-center font-semibold w-28  hover:bg-gray-100">
                                             <li className="text-orange-700 mt-2 mb-2 text-lg">6787</li>
                                             <li className="text-orange-900 mb-2 mt-2 uppercase">Total users audited</li>
@@ -218,9 +218,8 @@ const RegisterOrganisation = () => {
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
-                            <div className='w-1/2 mt-4 drop-shadow-lg bg-white flex flex-col items-center justify-center'>
+                            <div className='w-1/2 drop-shadow-lg bg-white flex flex-col items-center justify-center'>
                                 <h2 className='text-3xl text-center'>Precentage Of Employees</h2>
                                 <Chart
                                     chartType="PieChart"
@@ -233,22 +232,16 @@ const RegisterOrganisation = () => {
 
                             </div>
                         </div>
-                        <div className='bg-white mt-4 flex justify-between p-4 shadow-sm border p-2'>
-                            <div className='drop-shadow-lg bg-white p-2 w-72'>
+                        <div className='bg-white mt-4 flex mb-4 justify-between p-4 shadow-sm border p-2'>
+                            <div className='p-2 w-72'>
                                 <h3 className='text-lg'>Theme Career Growth</h3>
                                 <h3 className='text-lg'>Respondents Users :70</h3>
-                                <ReactStars
-                                    count={10}
-                                    onChange={ratingChanged}
-                                    size={18}
-                                    activeColor="#ffd700"
-                                />
                             </div>
-                            <div className='drop-shadow-lg bg-white p-2 w-72 flex flex-col justify-center'>
+                            <div className='p-2 w-72 flex flex-col justify-center'>
                                 <ProgressBar progressPercentage={65} />
                                 <h3 className='text-lg pt-2 text-indigo-700'>Theme Score : 65</h3>
                             </div>
-                            <div className='drop-shadow-lg bg-white p-2 w-72 flex flex-col justify-center'>
+                            <div className='p-2 w-72 flex flex-col justify-center'>
                                 <ul className='text-xl pl-6 pt-4 font-semibold'>
                                     <li className='flex items-center w-44 justify-between text-green-500'>Positive  <span>50</span></li>
                                     <li className='flex items-center w-44 justify-between text-indigo-700'>Neutral <span>50</span></li>
