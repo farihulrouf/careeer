@@ -129,11 +129,13 @@ const RegisterOrganisation = () => {
             </div>
 
             <div className="container mx-auto p-4 min-h-full bg-gray-50">
+                <p className="text-lg">Audit</p>
                 <Tabs
-                defaultIndex={0} onSelect={(index) => console.log(index)}
+                  
+                  defaultIndex={0} onSelect={(index) => console.log(index)}
                 >
-                    <TabList>
-                        <Tab>Create Audit</Tab>
+                    <TabList className="bg-white">
+                         <Tab>Create Audit</Tab>
                         <Tab> Audit Report</Tab>
                     </TabList>
 
@@ -181,7 +183,7 @@ const RegisterOrganisation = () => {
                             </div>
                         </div>
                     </TabPanel>
-                    <TabPanel className="bg-white">
+                    <TabPanel>
                         <div className='w-full flex mt-4'>
                             <div className='w-1/2 flex justify-center'>
                                 <div className='max-w-sm bg-white h-[300px] p-2 drop-shadow-lg'>
