@@ -13,94 +13,83 @@ import ReactStars from "react-rating-stars-component";
 import { Chart } from "react-google-charts";
 import 'react-accessible-accordion/dist/fancy-example.css';
 import ProgressBar from '../../components/chart/ProgressBar';
-export const data = [
-    ["Task", "Hours per Day"],
-    ["Work", 11],
-    ["Eat", 2],
-    ["Commute", 2],
-    ["Watch TV", 2],
-    ["Sleep", 7],
-  ];
-  
-  export const options = {
-    title: "My Daily Activities",
-  };
-  const datatable = [
+
+const datatable = [
     {
-      id: 1,
-      title: 'John Doe',
-      leader: 'johndoe@gmail.com',
-      position: '20 PTS'
+        id: 1,
+        title: 'John Doe',
+        leader: 'johndoe@gmail.com',
+        position: '20 PTS'
     },
     {
-      id: 2,
-      title: 'John Doe',
-      leader: 'johndoe@gmail.com',
-      position: '20 PTS'
+        id: 2,
+        title: 'John Doe',
+        leader: 'johndoe@gmail.com',
+        position: '20 PTS'
     },
     {
-      id: 3,
-      title: 'John Doe',
-      leader: 'johndoe@gmail.com',
-      position: '20 PTS'
+        id: 3,
+        title: 'John Doe',
+        leader: 'johndoe@gmail.com',
+        position: '20 PTS'
     },
     {
-      id: 4,
-      title: 'John Doe',
-      leader: 'johndoe@gmail.com',
-      position: '20 PTS'
+        id: 4,
+        title: 'John Doe',
+        leader: 'johndoe@gmail.com',
+        position: '20 PTS'
     },
     {
-      id: 5,
-      title: 'Antonie Silver',
-      leader: 'johndoe@gmail.com',
-      position: '20 PTS'
+        id: 5,
+        title: 'Antonie Silver',
+        leader: 'johndoe@gmail.com',
+        position: '20 PTS'
     },
-  ]
-  const columnstable = [
+]
+const columnstable = [
     {
-      name: 'Name',
-      selector: row => row.title,
-    },
-    {
-      name: 'Email',
-      selector: row => row.leader,
+        name: 'Name',
+        selector: row => row.title,
     },
     {
-      name: 'Risk Index',
-      selector: row => row.position,
+        name: 'Email',
+        selector: row => row.leader,
     },
-  ];
-  const customStyles = {
+    {
+        name: 'Risk Index',
+        selector: row => row.position,
+    },
+];
+const customStyles = {
     rows: {
-      style: {
-        minHeight: '50px', // override the row height
-      },
+        style: {
+            minHeight: '50px', // override the row height
+        },
     },
     headCells: {
-      style: {
-        paddingLeft: '8px', // override the cell padding for head cells
-        paddingRight: '8px',
-        fontSize: '16px',
-        display: 'flex',
-        justifyContent: 'center',
-  
-      },
+        style: {
+            paddingLeft: '8px', // override the cell padding for head cells
+            paddingRight: '8px',
+            fontSize: '16px',
+            display: 'flex',
+            justifyContent: 'center',
+
+        },
     },
     cells: {
-      style: {
-        paddingLeft: '8px', // override the cell padding for data cells
-        paddingRight: '8px',
-        fontSize: '14px',
-        display: 'flex',
-        justifyContent: 'center',
-  
-  
-      },
-  
+        style: {
+            paddingLeft: '8px', // override the cell padding for data cells
+            paddingRight: '8px',
+            fontSize: '14px',
+            display: 'flex',
+            justifyContent: 'center',
+
+
+        },
+
     },
-  };
-  
+};
+
 const RegisterOrganisation = () => {
     const [value, setValue] = useState({
         startDate: new Date(),
@@ -112,6 +101,18 @@ const RegisterOrganisation = () => {
         //ChangeComptencyMatrix()
         setValue(newValue);
     }
+    const datachart = [
+        ["Language", "Speakers (in millions)"],
+        ["Low Risk", 30],
+        ["Medium Risk", 30],
+        ["Hight risk", 40],
+    ];
+
+    const optionschart = {
+        legend: "none",
+        pieSliceText: "label",
+        pieStartAngle: 100,
+    };
     const options = [
         { value: 'select1', label: 'select1' },
         { value: 'select2', label: 'select2' },
@@ -126,8 +127,11 @@ const RegisterOrganisation = () => {
                 <NavBar />
                 <NavSub />
             </div>
+
             <div className="container mx-auto p-4 min-h-full bg-gray-50">
-                <Tabs>
+                <Tabs
+                defaultIndex={1} onSelect={(index) => console.log(index)}
+                >
                     <TabList>
                         <Tab>Create Audit</Tab>
                         <Tab> Audit Report</Tab>
@@ -211,50 +215,52 @@ const RegisterOrganisation = () => {
                                 </div>
 
                             </div>
-                            <div className='w-1/2 mt-4'>
+                            <div className='w-1/2 mt-4 flex flex-col drop-shadow-lg justify-center items-center'>
                                 <h2 className='text-3xl'>Precentage Of Employees</h2>
-                                
-                                <Chart
-                    chartType="PieChart"
-                    data={data}
-                    options={options}
-                    width={"100%"}
-                    height={"100%"}
-                  />
-                               
+
+                                <div className='w-full h-full'>
+                                    <Chart
+                                        chartType="PieChart"
+                                        data={datachart}
+                                        options={optionschart}
+                                        width={"100%"}
+                                        height={"100%"}
+                                    />
+                                </div>
+
                             </div>
                         </div>
-                        <div className='bg-white flex justify-between p-4 shadow-sm border p-2'>
+                        <div className='bg-white mt-4 flex justify-between p-4 shadow-sm border p-2'>
                             <div className='drop-shadow-lg bg-white p-2 w-72'>
                                 <h3 className='text-lg'>Theme Career Growth</h3>
                                 <h3 className='text-lg'>Respondents Users :70</h3>
                                 <ReactStars
-                                            count={10}
-                                            onChange={ratingChanged}
-                                            size={18}
-                                            activeColor="#ffd700"
-                                        />
+                                    count={10}
+                                    onChange={ratingChanged}
+                                    size={18}
+                                    activeColor="#ffd700"
+                                />
                             </div>
-                            <div className='drop-shadow-lg bg-white p-2 w-72 flex flex-col justify-center'>    
-                                <ProgressBar progressPercentage={90} />     
-                                <h3 className='text-lg pt-2'>Theme Score : 65</h3>
+                            <div className='drop-shadow-lg bg-white p-2 w-72 flex flex-col justify-center'>
+                                <ProgressBar progressPercentage={65} />
+                                <h3 className='text-lg pt-2 text-indigo-700'>Theme Score : 65</h3>
                             </div>
-                            <div className='drop-shadow-lg bg-white p-2 w-72 flex flex-col justify-center'>    
-                                <ul className='text-xl pl-6 pt-4'>
-                                    <li className='flex items-center w-44 justify-between'>Positive  <span>50</span></li> 
-                                    <li className='flex items-center w-44 justify-between'>Neutral <span>50</span></li>
-                                    <li className='flex items-center w-44 justify-between'>Negative <span>50</span></li>
+                            <div className='drop-shadow-lg bg-white p-2 w-72 flex flex-col justify-center'>
+                                <ul className='text-xl pl-6 pt-4 font-semibold'>
+                                    <li className='flex items-center w-44 justify-between text-green-500'>Positive  <span>50</span></li>
+                                    <li className='flex items-center w-44 justify-between text-indigo-700'>Neutral <span>50</span></li>
+                                    <li className='flex items-center w-44 justify-between text-red-500'>Negative <span>50</span></li>
                                 </ul>
                             </div>
                         </div>
                         <div className='bg-white p-4 shadow-sm border p-2'>
                             <h3 className='text-2xl'>Top Risk Employees</h3>
                             <DataTable
-                  columns={columnstable}
-                  data={datatable}
-                  customStyles={customStyles}
-                  pagination={5}
-                />
+                                columns={columnstable}
+                                data={datatable}
+                                customStyles={customStyles}
+                                pagination={5}
+                            />
                         </div>
                     </TabPanel>
                 </Tabs>
