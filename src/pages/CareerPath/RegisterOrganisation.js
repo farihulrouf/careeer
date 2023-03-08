@@ -104,8 +104,8 @@ const RegisterOrganisation = () => {
     const datachart = [
         ["Language", "Speakers (in millions)"],
         ["Low Risk", 30],
-        ["Medium Risk", 30],
-        ["Hight risk", 40],
+        ["Medium Risk", 35],
+        ["Hight risk", 35],
     ];
 
     const optionschart = {
@@ -215,18 +215,16 @@ const RegisterOrganisation = () => {
                                 </div>
 
                             </div>
-                            <div className='w-1/2 mt-4 flex flex-col drop-shadow-lg justify-center items-center'>
-                                <h2 className='text-3xl'>Precentage Of Employees</h2>
-
-                                <div className='w-full h-full'>
+                            <div className='w-1/2 mt-4 drop-shadow-lg bg-white flex flex-col items-center justify-center'>
+                                <h2 className='text-3xl text-center'>Precentage Of Employees</h2>
                                     <Chart
                                         chartType="PieChart"
                                         data={datachart}
                                         options={optionschart}
-                                        width={"100%"}
-                                        height={"100%"}
+                                        width={"300px"}
+                                        height={"300px"}
                                     />
-                                </div>
+                                
 
                             </div>
                         </div>
