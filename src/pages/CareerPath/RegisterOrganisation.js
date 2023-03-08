@@ -130,7 +130,7 @@ const RegisterOrganisation = () => {
 
             <div className="container mx-auto p-4 min-h-full bg-gray-50">
                 <Tabs
-                defaultIndex={1} onSelect={(index) => console.log(index)}
+                defaultIndex={0} onSelect={(index) => console.log(index)}
                 >
                     <TabList>
                         <Tab>Create Audit</Tab>
