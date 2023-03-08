@@ -258,6 +258,110 @@ const RegisterOrganisation = () => {
                                 pagination={5}
                             />
                         </div>
+                        <div className='mt-4 bg-white border'>
+                            <h3 className='text-2xl uppercase text-center'>Employee Audit Screen</h3>
+                            <div className='w-full'>
+                                <div className='flex space-x-16 justify-center mt-8'>
+                                    <div className='flex gap-2 items-center'>
+                                        <p className='mt-2'>Name</p>
+                                        <input type="text" className='border px-2 py-1' />
+                                    </div>
+                                    <div className='flex gap-2 items-center'>
+                                        <p className='mt-2'>Email</p>
+                                        <input type="text" className='border px-2 py-1' />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='flex justify-center mt-8 mb-4 rounded-sm'>
+                                <button className='text-white bg-red-500 px-4 py-2'>Start Audit</button>
+                            </div>
+                            <h4 className='text-xl p-4'>Question : 50 </h4>
+                            <div className='drop-shadow-lg border'>
+                                <p className='p-4'> 1 -Question I-Can You talk About Your Career Aspiration With your Manager</p>
+                                <form className='flex w-1/3 gap-8 p-4 flex-wrap'>
+                                    <div className="radio">
+                                        <label className='flex space-x-2'>
+                                            <input type="radio" value="option1" checked={true} />
+                                            <span>Yes Always</span>
+                                        </label>
+                                    </div>
+                                    <div className="radio">
+                                        <label className='flex space-x-2'>
+                                            <input type="radio" value="option2" />
+                                            <span>yes Most Of them</span>
+                                        </label>
+                                    </div>
+                                    <div className="radio">
+                                        <label className='flex space-x-2'>
+                                            <input type="radio" value="option3" />
+                                            <span>Not Sure</span>
+                                        </label>
+                                    </div>
+                                    <div className="radio">
+                                        <label className='flex space-x-2'>
+                                            <input type="radio" value="option3" />
+                                            <span> Not As much</span>
+                                        </label>
+                                    </div>
+                                    <div className="radio">
+
+                                        <label className='flex space-x-2'>
+                                            <input type="radio" value="option3" />
+                                            <span>Not All</span>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div className='drop-shadow-lg border'>
+                                <p className='p-4'> 2 -do you beieved thats your failry compansated for your job ?</p>
+                                <form className='flex w-full gap-8 p-4 flex-wrap'>
+                                    <div className="radio">
+                                        <label className='flex space-x-2'>
+                                            <input type="radio" value="option1" checked={true} />
+                                            <span>Yes, I am</span>
+                                        </label>
+                                    </div>
+                                    <div className="radio">
+                                        <label className='flex space-x-2'>
+                                            <input type="radio" value="option2" />
+                                            <span>yes To large Content</span>
+                                        </label>
+                                    </div>
+                                    <div className="radio">
+                                        <label className='flex space-x-2'>
+                                            <input type="radio" value="option3" />
+                                            <span>I m not sure at the moment</span>
+                                        </label>
+                                    </div>
+                                    <div className="radio">
+                                        <label className='flex space-x-2'>
+                                            <input type="radio" value="option3" />
+                                            <span> Not realy</span>
+                                        </label>
+                                    </div>
+                                    <div className="radio">
+
+                                        <label className='flex space-x-2'>
+                                            <input type="radio" value="option3" />
+                                            <span>No I m Not</span>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div className='flex justify-center mt-8 mb-2'>
+                                <button className='bg-red-500 text-white px-3 py-2'>Submit</button>
+                            </div>
+                            <div className='w-full bg-white flex space-x-2 mt-16'>
+                            <div className='w-1/2 h-[300px] border flex justify-center items-center'>
+                                    <h3 className='w-44 text-2xl'>Thank You For Answering The Survey</h3>
+                            </div>
+                            <div className='w-1/2 h-[300px] border'>
+                                <h3 className='text-center text-xl uppercase'>instructions</h3>
+                                <p className='text-left text-xl uppercase p-2'>All question are mandatory</p>
+                            </div>
+                        </div>
+                        </div>
+
                     </TabPanel>
                 </Tabs>
             </div>
