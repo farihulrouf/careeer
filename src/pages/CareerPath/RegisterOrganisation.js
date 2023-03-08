@@ -114,7 +114,7 @@ const RegisterOrganisation = () => {
         pieStartAngle: 100,
     };
     const options = [
-        { value: 'select1', label: 'select1' },
+        { value: 'select audit', label: 'select audit' },
         { value: 'select2', label: 'select2' },
         { value: 'select3', label: 'select3' }
     ]
@@ -131,19 +131,21 @@ const RegisterOrganisation = () => {
             <div className="container mx-auto p-4 min-h-full bg-gray-50">
                 <p className="text-lg">Audit</p>
                 <Tabs
-                  
-                  defaultIndex={0} onSelect={(index) => console.log(index)}
+                    defaultIndex={0} onSelect={(index) => console.log(index)}
                 >
                     <TabList className="bg-white">
-                         <Tab>Create Audit</Tab>
+                        <Tab>Create Audit</Tab>
                         <Tab> Audit Report</Tab>
                     </TabList>
 
                     <TabPanel>
-                        <div className="w-full flex justify-between p-2">
-                            <div className="flex space-x-2 item-center mt-2 mb-2 max-w-sm py-2">
-                                <Select options={options} />
+                        <div className="w-full flex items-center justify-between p-2">
 
+                            <Select className='w-36' placeholder="Select Audit" options={options} />
+
+
+
+                            <div>
                                 <div className='flex space-x-2 items-center'>
                                     <p className='pt-2'>Audit Name</p>
                                     <input type="text" className="border rounded- py-2" />
@@ -153,12 +155,13 @@ const RegisterOrganisation = () => {
                                 <div className='flex items-center space-x-2'>
                                     <p className='w-96 pt-2'>No Of employees to Audit</p>
                                     <Datepicker
+                                        placeholder={"Start Date  -  End Date"}
                                         value={value}
                                         onChange={handleValueChange}
                                     />
                                 </div>
 
-                                <button className="bg-pink-700 px-2 w-40 rounded-sm text-white hover:bg-teal-500">Generate Audit</button>
+                                <button className="bg-red-300 px-2 w-44 rounded-sm text-white hover:bg-teal-500">Generate Audit</button>
                             </div>
                             <div>
                             </div>
@@ -219,14 +222,14 @@ const RegisterOrganisation = () => {
                             </div>
                             <div className='w-1/2 mt-4 drop-shadow-lg bg-white flex flex-col items-center justify-center'>
                                 <h2 className='text-3xl text-center'>Precentage Of Employees</h2>
-                                    <Chart
-                                        chartType="PieChart"
-                                        data={datachart}
-                                        options={optionschart}
-                                        width={"300px"}
-                                        height={"300px"}
-                                    />
-                                
+                                <Chart
+                                    chartType="PieChart"
+                                    data={datachart}
+                                    options={optionschart}
+                                    width={"300px"}
+                                    height={"300px"}
+                                />
+
 
                             </div>
                         </div>
