@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProgressBar from "../../components/chart/ProgressBar";
 import { AiOutlineFilter, AiOutlineFilePdf, AiFillGold, AiOutlineTrophy, AiOutlineUsergroupDelete } from "react-icons/ai";
 import { BiRun } from "react-icons/bi"
@@ -8,7 +8,7 @@ import DataTable from 'react-data-table-component';
 import NavBar from "../../components/NavBar";
 //import Datepicker from "react-tailwindcss-datepicker";
 import NavSub from "../../components/NavSub";
-import moment from 'moment';
+//import moment from 'moment';
 import ApiService from "../../service/ApiService";
 
 const customStyles = {
@@ -48,7 +48,6 @@ const Career = () => {
     startDate: new Date(),
     endDate: new Date().setMonth(11)
   });
-
   const data = [
     ["Skill Gap Covered", "Skill Gap"],
     ["Skill Gap Covered", 60],
@@ -500,14 +499,14 @@ const Career = () => {
                   <ul className="text-center font-semibold">
                     <li className="text-orange-700 text-3xl font-bold">{dataCareer.upwardCareerPathsProposed}</li>
                     <li className="text-indigo-900">Upward Path</li>
-                    <li className="text-indigo-900">Propposed</li>
+                    <li className="text-indigo-900">Proposed</li>
                   </ul>
                 </div>
                 <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
                     <li className="text-orange-700 text-3xl font-bold">{dataCareer.alternateCareerPathsProposed}</li>
                     <li className="text-indigo-900">Aalternate Path</li>
-                    <li className="text-indigo-900">Propposed</li>
+                    <li className="text-indigo-900">Proposed</li>
                   </ul>
                 </div>
                 <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
@@ -520,7 +519,7 @@ const Career = () => {
                 <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
                     <li className="text-orange-700 text-3xl font-bold">0</li>
-                    <li className="text-indigo-900">Propposed PATH</li>
+                    <li className="text-indigo-900">Proposed PATH</li>
                     <li className="text-indigo-900">Moved To Role</li>
                   </ul>
                 </div>
