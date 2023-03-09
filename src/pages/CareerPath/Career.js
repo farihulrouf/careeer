@@ -505,7 +505,7 @@ const Career = () => {
                 <div className="w-48 bg-white drop-shadow-md hover:bg-gray-100">
                   <ul className="text-center font-semibold">
                     <li className="text-orange-700 text-3xl font-bold">{dataCareer.alternateCareerPathsProposed}</li>
-                    <li className="text-indigo-900">Aalternate Path</li>
+                    <li className="text-indigo-900">Alternate Path</li>
                     <li className="text-indigo-900">Proposed</li>
                   </ul>
                 </div>
