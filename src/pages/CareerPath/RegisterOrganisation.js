@@ -6,7 +6,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 //import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel, } from 'react-accessible-accordion';
 import NavBar from "../../components/NavBar";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NavSub from "../../components/NavSub";
 import DataTable from 'react-data-table-component';
 import ReactStars from "react-rating-stars-component";
@@ -14,6 +14,8 @@ import { Chart } from "react-google-charts";
 import 'react-accessible-accordion/dist/fancy-example.css';
 import ProgressBar from '../../components/chart/ProgressBar';
 import Popup from 'reactjs-popup';
+import ApiService from "../../service/ApiService";
+import { render } from '@testing-library/react';
 const datatable = [
     {
         id: 1,
@@ -96,6 +98,18 @@ const RegisterOrganisation = () => {
         endDate: new Date().setMonth(11)
     });
 
+    const [dataQuestion, setDataQuestion] = useState(
+        [
+            {
+                options: [],
+                questionId: 1,
+                question: "Question",
+                ratings: [
+
+                ]
+            }
+        ]
+    )
     const [open, setOpen] = useState(false)
     const handleValueChange = (newValue) => {
         console.log("newValue:", newValue);
@@ -124,6 +138,18 @@ const RegisterOrganisation = () => {
         console.log(newRating);
     }
     const closeModal = () => setOpen(false)
+    useEffect(() => {
+        ApiService.getQuestion().then(
+            (response) => {
+                setDataQuestion(response.data.questions)
+            },
+            (error) => {
+                console.log(error)
+            }
+        )
+    }, [])
+
+    console.log("data question", dataQuestion)
     return (
         <>
             <div className='container mx-auto'>
@@ -272,98 +298,49 @@ const RegisterOrganisation = () => {
                         </div>
                         <div className='mt-4 bg-white'>
                             <div className='border'>
-                            <h3 className='text-2xl uppercase text-center'>Employee Audit Screen</h3>
-                            <div className='w-full'>
-                                <div className='flex space-x-16 justify-center mt-8'>
-                                    <div className='flex gap-2 items-center'>
-                                        <p className='mt-2'>Name</p>
-                                        <input type="text" className='border px-2 py-1' />
-                                    </div>
-                                    <div className='flex gap-2 items-center'>
-                                        <p className='mt-2'>Email</p>
-                                        <input type="text" className='border px-2 py-1' />
+                                <h3 className='text-2xl uppercase text-center'>Employee Audit Screen</h3>
+                                <div className='w-full'>
+                                    <div className='flex space-x-16 justify-center mt-8'>
+                                        <div className='flex gap-2 items-center'>
+                                            <p className='mt-2'>Name</p>
+                                            <input type="text" className='border px-2 py-1' />
+                                        </div>
+                                        <div className='flex gap-2 items-center'>
+                                            <p className='mt-2'>Email</p>
+                                            <input type="text" className='border px-2 py-1' />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className='flex justify-center mt-8 mb-4 rounded-sm'>
-                                <button className='text-white bg-red-500 px-4 py-2'>Start Audit</button>
-                            </div>
+                                <div className='flex justify-center mt-8 mb-4 rounded-sm'>
+                                    <button className='text-white bg-red-500 px-4 py-2'>Start Audit</button>
+                                </div>
                             </div>
                             <div className='border mt-2'>
-                                 <h4 className='text-xl p-4'>Question : 50 </h4>
+                                <h4 className='text-xl p-4'>Question : 50 </h4>
                             </div>
-                            <div className='drop-shadow-lg border mt-2 mb-2'>
-                                <p className='p-4'> 1 -Question I-Can You talk About Your Career Aspiration With your Manager</p>
-                                <form className='flex w-1/3 gap-8 p-4 flex-wrap'>
-                                    <div className="radio">
-                                        <label className='flex space-x-2'>
-                                            <input type="radio" value="option1" checked={true} />
-                                            <span>Yes Always</span>
-                                        </label>
-                                    </div>
-                                    <div className="radio">
-                                        <label className='flex space-x-2'>
-                                            <input type="radio" value="option2" />
-                                            <span>yes Most Of them</span>
-                                        </label>
-                                    </div>
-                                    <div className="radio">
-                                        <label className='flex space-x-2'>
-                                            <input type="radio" value="option3" />
-                                            <span>Not Sure</span>
-                                        </label>
-                                    </div>
-                                    <div className="radio">
-                                        <label className='flex space-x-2'>
-                                            <input type="radio" value="option3" />
-                                            <span> Not As much</span>
-                                        </label>
-                                    </div>
-                                    <div className="radio">
 
-                                        <label className='flex space-x-2'>
-                                            <input type="radio" value="option3" />
-                                            <span>Not All</span>
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
-                            <div className='drop-shadow-lg border'>
-                                <p className='p-4'> 2 -do you beieved thats your failry compansated for your job ?</p>
-                                <form className='flex w-full gap-8 p-4 flex-wrap'>
-                                    <div className="radio">
-                                        <label className='flex space-x-2'>
-                                            <input type="radio" value="option1" checked={true} />
-                                            <span>Yes, I am</span>
-                                        </label>
-                                    </div>
-                                    <div className="radio">
-                                        <label className='flex space-x-2'>
-                                            <input type="radio" value="option2" />
-                                            <span>yes To large Content</span>
-                                        </label>
-                                    </div>
-                                    <div className="radio">
-                                        <label className='flex space-x-2'>
-                                            <input type="radio" value="option3" />
-                                            <span>I m not sure at the moment</span>
-                                        </label>
-                                    </div>
-                                    <div className="radio">
-                                        <label className='flex space-x-2'>
-                                            <input type="radio" value="option3" />
-                                            <span> Not realy</span>
-                                        </label>
-                                    </div>
-                                    <div className="radio">
+                            {dataQuestion.map((questions, index) => {
+                                return (
+                                    <div className='drop-shadow-lg border mt-2 mb-2'>
+                                        <p className='p-4'> {index+1} {questions.question}</p>
 
-                                        <label className='flex space-x-2'>
-                                            <input type="radio" value="option3" />
-                                            <span>No I m Not</span>
-                                        </label>
+                                        <div className='flex w-full gap-8 p-4 flex-wrap'>
+                                        {questions.options.map((answer, i) => {
+                                            return (
+                                                <div className="radio">
+                                                    <label className='flex space-x-2'>
+                                                        <input type="radio" value="option1" checked={false} />
+                                                        <span>{answer}</span>
+                                                    </label>
+                                                </div>
+                                           
+                                            )
+                                               
+                                         })}
+                                          </div>
                                     </div>
-                                </form>
-                            </div>
+                                )
+                            })}
                             <div className='flex justify-center mt-8 mb-2'>
                                 <button className='bg-red-500 text-white px-3 py-2' onClick={() => setOpen(!open)}>Submit</button>
                             </div>

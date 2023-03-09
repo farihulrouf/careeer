@@ -77,11 +77,16 @@ const Competency = async (startTime, endTime) => {
     });
   }
  
+  const getQuestion = () => {
+    return axios.get(API_URL + "audit/getAuditUrl?category=Pulse&orgId=18&auditName=SGR", 
+    { headers: AuthHeader() });
+  };
   
   
 
 const ApiService = {
   Competency,
+  getQuestion,
   CareerPathApi,
   AttritionApi,
   ActivityApi,
