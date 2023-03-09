@@ -168,21 +168,23 @@ const RegisterOrganisation = () => {
                     </TabList>
 
                     <TabPanel>
-                        <div className="w-full flex items-center justify-between p-2">
+                        <div className="w-full flex items-center justify-between p-2 ">
 
+                            <div className='w-1/2 flex'>
                             <Select className='w-36' placeholder="Select Audit" options={options} />
-
-
-
-                            <div>
+                            <div className=''>
                                 <div className='flex space-x-2 items-center'>
                                     <p className='pt-2'>Audit Name</p>
                                     <input type="text" className="border rounded- py-2" />
                                 </div>
                             </div>
-                            <div className="flex space-x-2 justify-between item-center mt-2 mb-2 py-2 w-1/2">
+                            </div>
+                            <div className="flex bg-pink-500 space-x-2 justify-between item-center mt-2 mb-2 py-2 w-1/2">
                                 <div className='flex items-center space-x-2'>
-                                    <p className='w-96 pt-2'>No Of employees to Audit</p>
+                                    <div className='flex items-center'>
+                                        <label className='pt-2'>No Of employees to Audit</label>
+                                        <input className='py-2' border type="text" />
+                                    </div>
                                     <Datepicker
                                         placeholder={"Start Date  -  End Date"}
                                         value={value}
