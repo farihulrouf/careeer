@@ -119,9 +119,9 @@ const RegisterOrganisation = () => {
     }
     const datachart = [
         ["Language", "Speakers (in millions)"],
-        ["Low Risk", 30],
-        ["Medium Risk", 35],
-        ["Hight risk", 35],
+        ["Low", 30],
+        ["Medium", 35],
+        ["Hight", 35],
     ];
 
     const optionschart = {
