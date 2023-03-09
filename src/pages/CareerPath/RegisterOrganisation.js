@@ -1,5 +1,5 @@
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { AiOutlineCopy } from "react-icons/ai"
+import { AiOutlineCopy, AiOutlineClose } from "react-icons/ai"
 import Datepicker from "react-tailwindcss-datepicker";
 import Select from 'react-select'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -13,7 +13,7 @@ import ReactStars from "react-rating-stars-component";
 import { Chart } from "react-google-charts";
 import 'react-accessible-accordion/dist/fancy-example.css';
 import ProgressBar from '../../components/chart/ProgressBar';
-
+import Popup from 'reactjs-popup';
 const datatable = [
     {
         id: 1,
@@ -95,6 +95,8 @@ const RegisterOrganisation = () => {
         startDate: new Date(),
         endDate: new Date().setMonth(11)
     });
+
+    const [open, setOpen] = useState(false)
     const handleValueChange = (newValue) => {
         console.log("newValue:", newValue);
         //console.log(new Date())
@@ -121,6 +123,7 @@ const RegisterOrganisation = () => {
     const ratingChanged = (newRating) => {
         console.log(newRating);
     }
+    const closeModal = () => setOpen(false)
     return (
         <>
             <div className='container mx-auto'>
@@ -188,13 +191,22 @@ const RegisterOrganisation = () => {
                     </TabPanel>
                     <TabPanel>
                         <div className='w-full flex mt-4 gap-2'>
-                            <div className='w-1/2 flex justify-center drop-shadow-lg'>
+                            <div className='w-1/2 flex justify-center drop-shadow-lg relative'>
+                                <div className='absolute -0'>
+
+                                </div>
                                 <div className='w-full bg-white p-2 drop-shadow-lg'>
                                     <div className='flex justify-center items-center gap-4'>
-                                        <p className='text-gray-500 text-lg'>Employees Name</p>
-                                        <h4 className='text-2xl'>Audit Report</h4>
+                                        <div className='flex mt-2 space-x-2 items-center'>
+                                            <label>Audit Type</label>
+                                            <input type="text" placeholder='Audit Type' className='border w-24 rounded-sm px-2 py-1' />
+                                        </div>
+                                        <div className='flex space-x-2 items-center'>
+                                            <label>Audit Name</label>
+                                            <input type="text" placeholder='Audit Name' className='border w-24 rounded-sm px-2 py-1' />
+                                        </div>
                                     </div>
-                                    <div className='flex flex-col justify-center items-center mt-4 mb-2'>
+                                    <div className='flex flex-col justify-center items-center mt-12 mb-2'>
                                         <h2 className='text-black text-3xl font-semibold'>4.5 Score</h2>
                                         <ReactStars
                                             count={5}
@@ -258,7 +270,8 @@ const RegisterOrganisation = () => {
                                 pagination={5}
                             />
                         </div>
-                        <div className='mt-4 bg-white border'>
+                        <div className='mt-4 bg-white'>
+                            <div className='border'>
                             <h3 className='text-2xl uppercase text-center'>Employee Audit Screen</h3>
                             <div className='w-full'>
                                 <div className='flex space-x-16 justify-center mt-8'>
@@ -275,8 +288,11 @@ const RegisterOrganisation = () => {
                             <div className='flex justify-center mt-8 mb-4 rounded-sm'>
                                 <button className='text-white bg-red-500 px-4 py-2'>Start Audit</button>
                             </div>
-                            <h4 className='text-xl p-4'>Question : 50 </h4>
-                            <div className='drop-shadow-lg border'>
+                            </div>
+                            <div className='border mt-2'>
+                                 <h4 className='text-xl p-4'>Question : 50 </h4>
+                            </div>
+                            <div className='drop-shadow-lg border mt-2 mb-2'>
                                 <p className='p-4'> 1 -Question I-Can You talk About Your Career Aspiration With your Manager</p>
                                 <form className='flex w-1/3 gap-8 p-4 flex-wrap'>
                                     <div className="radio">
@@ -349,18 +365,28 @@ const RegisterOrganisation = () => {
                                 </form>
                             </div>
                             <div className='flex justify-center mt-8 mb-2'>
-                                <button className='bg-red-500 text-white px-3 py-2'>Submit</button>
+                                <button className='bg-red-500 text-white px-3 py-2' onClick={() => setOpen(!open)}>Submit</button>
                             </div>
-                            <div className='w-full bg-white flex space-x-2 mt-16'>
-                            <div className='w-1/2 h-[300px] border flex justify-center items-center'>
-                                    <h3 className='w-44 text-2xl'>Thank You For Answering The Survey</h3>
-                            </div>
-                            <div className='w-1/2 h-[300px] border'>
-                                <h3 className='text-center text-xl uppercase'>instructions</h3>
-                                <p className='text-left text-xl uppercase p-2'>All question are mandatory</p>
-                            </div>
+
                         </div>
-                        </div>
+
+                        <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+                            <div className='md:w-[678px] w-[350px] bg-white shadow-md flex flex-col items-center border p-2'>
+                                <div className='w-full flex justify-end'>
+                                    <AiOutlineClose size={24} onClick={closeModal} />
+                                </div>
+                                <div className='w-full bg-white flex space-x-2 mt-2'>
+                                    <div className='w-1/2 h-[300px] border flex justify-center items-center'>
+                                        <h3 className='w-44 text-2xl'>Thank You For Answering The Survey</h3>
+                                    </div>
+                                    <div className='w-1/2 h-[300px] border'>
+                                        <h3 className='text-center text-xl uppercase'>instructions</h3>
+                                        <p className='text-left text-lg uppercase p-2'>All question are mandatory</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Popup>
+
 
                     </TabPanel>
                 </Tabs>
